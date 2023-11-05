@@ -1,6 +1,6 @@
 package zxf.logging.legacy;
 
-public class CommonLoggingService {
+public class JCLLoggingService {
     public void execute() {
 
     }
