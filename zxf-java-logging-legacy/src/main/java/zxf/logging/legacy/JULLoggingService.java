@@ -8,8 +8,10 @@ public class JULLoggingService {
 
     public void execute() {
         logger.log(Level.FINEST, "JUL FINEST message");
+        logger.log(Level.FINER, "JUL FINER message");
         logger.log(Level.FINE, "JUL FINE message");
         logger.log(Level.INFO, "JUL INFO message");
+        logger.log(Level.CONFIG, "JUL CONFIG message");
         logger.log(Level.WARNING, "JUL WARING message");
         logger.log(Level.SEVERE, "JUL SEVERE message");
     }
