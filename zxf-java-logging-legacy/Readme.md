@@ -8,12 +8,15 @@
 
 ## JCL configuration(LogFactory Configuration)
 ### org.apache.commons.logging.LogFactory
-- org.apache.commons.logging.LogFactory[System Property]
+- org.apache.commons.logging.LogFactory=*******[System Property]
 - classpath:/META-INF/services/org.apache.commons.logging.LogFactory[Resource file, className]
 - classpath:/commons-logging.properties["org.apache.commons.logging.LogFactory=*", priority=*]
 - org.apache.commons.logging.impl.LogFactoryImpl[default log factory implementation]
 ### org.apache.commons.logging.diagnostics.dest
 - org.apache.commons.logging.diagnostics.dest=STDOUT|STDERR[System Property]
+### org.apache.commons.logging.Log
+- org.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog[Attribute]
+- org.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog[System Property]
 ### Other attributes
 - classpath:/commons-logging.properties["org.apache.commons.logging.LogFactory=*", priority=*]
 
@@ -29,4 +32,4 @@
 ## JCL Key Classes
 - org.apache.commons.logging.Log
 - org.apache.commons.logging.LogFactory.getLog(<class>)
-- org.apache.commons.logging.impl.LogFactoryImpl
+- org.apache.commons.logging.impl.LogFactoryImpl.discoverLogImplementation(String logCategory)

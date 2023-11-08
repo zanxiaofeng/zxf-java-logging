@@ -15,7 +15,7 @@ public class Tests {
 
     private static void testJCL() {
         System.out.println("Testing JCL logging.............");
-        System.setProperty("org.apache.commons.logging.diagnostics.dest", "STDOUT");
+        //System.setProperty("org.apache.commons.logging.diagnostics.dest", "STDOUT");
         new JCLLoggingService().execute();
     }
 }
