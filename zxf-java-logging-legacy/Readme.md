@@ -19,6 +19,13 @@
 
 # Key Classes
 ## JUL Key Classes
+- java.util.logging.Logger
+- java.util.logging.Handler
+- java.util.logging.FileHandler
+- java.util.logging.ConsoleHandler
+- java.util.logging.Formatter
+- java.util.logging.SimpleFormatter
+- java.util.logging.XMLFormatter
 ## JCL Key Classes
 - org.apache.commons.logging.Log
 - org.apache.commons.logging.LogFactory.getLog(<class>)
