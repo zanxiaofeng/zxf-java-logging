@@ -1,12 +1,12 @@
 # Configurations
 ## JUL configuration
 ### Default configuration
-- {-Djava.home}/conf/logging.properties
+- {-D:java.home}/conf/logging.properties
 ### Custom configration
-- -Djava.util.logging.config.file
-- -Djava.util.logging.config.class
+- java.util.logging.config.file[System Property]
+- java.util.logging.config.class[System Property]
 
-## JCL configuration(LogFactory Configuration)
+## JCL configuration
 ### org.apache.commons.logging.LogFactory
 - org.apache.commons.logging.LogFactory=*******[System Property]
 - classpath:/META-INF/services/org.apache.commons.logging.LogFactory[Resource file, className]
@@ -19,6 +19,17 @@
 - org.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog[System Property]
 ### Other attributes
 - classpath:/commons-logging.properties["org.apache.commons.logging.LogFactory=*", priority=*]
+
+## Log4j V1 configuration
+### Default configuration
+- classpath:/log4j.xml
+- classpath:/log4j.properties
+### Custom configration
+- log4j.configuration[System Property]
+- log4j.configuratorClass[System Property]
+
+## Log4j V2 configuration
+
 
 # Key Classes
 ## JUL Key Classes
@@ -33,3 +44,18 @@
 - org.apache.commons.logging.Log
 - org.apache.commons.logging.LogFactory.getLog(<class>)
 - org.apache.commons.logging.impl.LogFactoryImpl.discoverLogImplementation(String logCategory)
+## Log4j V1 Key Classes
+- org.apache.log4j.Level
+- org.apache.log4j.Logger
+- org.apache.log4j.LogManager
+- org.apache.log4j.MDC
+- org.apache.log4j.Appender
+- org.apache.log4j.ConsoleAppender
+- org.apache.log4j.FileAppender
+- org.apache.log4j.spi.Configurator
+- org.apache.log4j.PropertyConfigurator.PropertyConfigurator
+- org.apache.log4j.xml.DOMConfigurator
+
+## Log4j V2 Key Classes
+
+

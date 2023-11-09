@@ -14,6 +14,7 @@
         <module>zxf-java-logging-sfl4j-api</module>
         <module>zxf-java-logging-slf4j-logback</module>
         <module>zxf-java-logging-slf4j-log4j2</module>
+        <module>zxf-java-loging-springboot-logging</module>
     </modules>
 
     <properties>

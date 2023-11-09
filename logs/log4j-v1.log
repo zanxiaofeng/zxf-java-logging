@@ -1,0 +1,8 @@
+[ZXF][INFO] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(11) | Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF][INFO] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(11) | Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF][WARN] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(12) | Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF][WARN] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(12) | Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF][ERROR] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(13) | Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF][ERROR] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(13) | Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF][FATAL] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(14) | Log4j V1 FATAL message by org.apache.log4j.Logger
+[ZXF][FATAL] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(14) | Log4j V1 FATAL message by org.apache.log4j.Logger
