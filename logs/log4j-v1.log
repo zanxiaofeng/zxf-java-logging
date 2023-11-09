@@ -1,8 +1,8 @@
-[ZXF][INFO] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(11) | Log4j V1 INFO message by org.apache.log4j.Logger
-[ZXF][INFO] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(11) | Log4j V1 INFO message by org.apache.log4j.Logger
-[ZXF][WARN] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(12) | Log4j V1 WARN message by org.apache.log4j.Logger
-[ZXF][WARN] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(12) | Log4j V1 WARN message by org.apache.log4j.Logger
-[ZXF][ERROR] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(13) | Log4j V1 ERROR message by org.apache.log4j.Logger
-[ZXF][ERROR] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(13) | Log4j V1 ERROR message by org.apache.log4j.Logger
-[ZXF][FATAL] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(14) | Log4j V1 FATAL message by org.apache.log4j.Logger
-[ZXF][FATAL] [2023-11-09 09:47:31] zxf.logging.legacy.Log4jV1LoggingService.execute(14) | Log4j V1 FATAL message by org.apache.log4j.Logger
+[ZXF] 2023-11-09 13:37:17 INFO  [main] Log4jV1LoggingService:15, TraceId=9a81aec1-52e7-4bf6-ad9a-57ff99aa70dd - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2023-11-09 13:37:17 INFO  [main] Log4jV1LoggingService:15, TraceId=9a81aec1-52e7-4bf6-ad9a-57ff99aa70dd - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2023-11-09 13:37:17 WARN  [main] Log4jV1LoggingService:16, TraceId=9a81aec1-52e7-4bf6-ad9a-57ff99aa70dd - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2023-11-09 13:37:17 WARN  [main] Log4jV1LoggingService:16, TraceId=9a81aec1-52e7-4bf6-ad9a-57ff99aa70dd - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2023-11-09 13:37:17 ERROR [main] Log4jV1LoggingService:17, TraceId=9a81aec1-52e7-4bf6-ad9a-57ff99aa70dd - Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF] 2023-11-09 13:37:17 ERROR [main] Log4jV1LoggingService:17, TraceId=9a81aec1-52e7-4bf6-ad9a-57ff99aa70dd - Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF] 2023-11-09 13:37:17 FATAL [main] Log4jV1LoggingService:18, TraceId=9a81aec1-52e7-4bf6-ad9a-57ff99aa70dd - Log4j V1 FATAL message by org.apache.log4j.Logger
+[ZXF] 2023-11-09 13:37:17 FATAL [main] Log4jV1LoggingService:18, TraceId=9a81aec1-52e7-4bf6-ad9a-57ff99aa70dd - Log4j V1 FATAL message by org.apache.log4j.Logger

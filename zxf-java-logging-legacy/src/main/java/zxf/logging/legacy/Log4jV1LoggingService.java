@@ -2,9 +2,13 @@ package zxf.logging.legacy;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.apache.log4j.MDC;
+
+import java.util.UUID;
 
 public class Log4jV1LoggingService {
     public void execute() {
+        MDC.put("TraceId", UUID.randomUUID().toString());
         Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
         logger.trace("Log4j V1 TRACE message by " + logger.getClass().getName());
         logger.debug("Log4j V1 DEBUG message by " + logger.getClass().getName());
