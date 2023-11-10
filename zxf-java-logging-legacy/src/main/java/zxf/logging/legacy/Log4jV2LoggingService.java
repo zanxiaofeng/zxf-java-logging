@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Log4jV2LoggingService {
     public void execute() {
+        System.setProperty("log4j2.debug", "true");
         Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
         logger.trace("Log4j V2 TRACE message by " + logger.getClass().getName());
         logger.debug("Log4j V2 DEBUG message by " + logger.getClass().getName());

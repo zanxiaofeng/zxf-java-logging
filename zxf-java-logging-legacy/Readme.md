@@ -29,7 +29,16 @@
 - log4j.configuratorClass[System Property]
 
 ## Log4j V2 configuration
-
+## Supported Property Keys
+- log4j2.loggerContextFactory=****[Property]
+- log4j2.debug=false[Property]
+- Log4jContextSelector=****[Property]
+## System Properties
+- Include Supported Property Keys
+## classpath:log4j2.system.properties
+- Include Supported Property Keys
+## classpath:log4j2.component.properties
+- Include Supported Property Keys
 
 # Key Classes
 ## JUL Key Classes
@@ -57,5 +66,13 @@
 - org.apache.log4j.xml.DOMConfigurator
 
 ## Log4j V2 Key Classes
+- org.apache.logging.log4j.Logger;
+- org.apache.logging.log4j.LogManager;
+- org.apache.logging.log4j.util.PropertiesUtil
+- org.apache.logging.log4j.util.PropertiesUtil.Environment
+- org.apache.logging.log4j.spi.LoggerContextFactory
+- org.apache.logging.log4j.simple.SimpleLoggerContextFactory
+- org.apache.logging.slf4j.SLF4JLoggerContextFactory
+- org.apache.logging.log4j.core.impl.Log4jContextFactory
 
 
