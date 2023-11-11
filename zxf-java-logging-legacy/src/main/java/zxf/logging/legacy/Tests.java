@@ -10,9 +10,9 @@ public class Tests {
     }
 
     private static void testJUL() {
-        System.out.println("Testing JUL logging.............");
         System.setProperty("java.util.logging.config.file", "./zxf-java-logging-legacy/src/main/resources/jul.logging.properties");
-        new JULLoggingService().execute();
+        new JULLoggingService().checkConfiguration();
+        new JULLoggingService().testLogging();
     }
 
     private static void testJCL() {

@@ -33,6 +33,8 @@
 - log4j2.loggerContextFactory=****[Property]
 - log4j2.debug=false[Property]
 - Log4jContextSelector=****[Property]
+- log4j.configurationFactory=*****[Property]
+- log4j.configurationFile=*****[Property]
 ## System Properties
 - Include Supported Property Keys
 ## classpath:log4j2.system.properties
@@ -43,6 +45,7 @@
 # Key Classes
 ## JUL Key Classes
 - java.util.logging.Logger
+- java.util.logging.LogManager
 - java.util.logging.Handler
 - java.util.logging.FileHandler
 - java.util.logging.ConsoleHandler
@@ -74,5 +77,9 @@
 - org.apache.logging.log4j.simple.SimpleLoggerContextFactory
 - org.apache.logging.slf4j.SLF4JLoggerContextFactory
 - org.apache.logging.log4j.core.impl.Log4jContextFactory
-
-
+- org.apache.logging.log4j.core.config.ConfigurationFactory(ConfigurationFactory getInstance())
+- org.apache.logging.log4j.core.config.ConfigurationFactory.Factory(Configuration getConfiguration(****))
+- org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory
+- org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory
+- org.apache.logging.log4j.core.config.json.JsonConfigurationFactory
+- org.apache.logging.log4j.core.config.yaml.YamlConfigurationFactory
