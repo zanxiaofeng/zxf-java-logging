@@ -21,12 +21,13 @@
 - classpath:/commons-logging.properties["org.apache.commons.logging.LogFactory=*", priority=*]
 
 ## Log4j V1 configuration
-### Default configuration file
+### Configuration file selection
+#### Default configuration file
 - classpath:log4j.xml
 - classpath:log4j.properties
-### Custom configration file
+#### Custom configration file
 - log4j.configuration[System Property]
-## Configuration class selection
+### Configuration class selection
 1. From log4j.configuratorClass[System Property]
 2. org.apache.log4j.xml.DOMConfigurator[if fileName end with .xml]
 3. org.apache.log4j.PropertyConfigurator.PropertyConfigurator
