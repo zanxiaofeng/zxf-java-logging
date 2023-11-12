@@ -1,7 +1,14 @@
 package zxf.logging.legacy;
 
+import zxf.logging.legacy.service.JCLLoggingService;
+import zxf.logging.legacy.service.JULLoggingService;
+import zxf.logging.legacy.service.Log4jV1LoggingService;
+import zxf.logging.legacy.service.Log4jV2LoggingService;
+
+import java.io.IOException;
+
 public class Tests {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(System.getProperties());
         testJUL();
         testJCL();
@@ -15,19 +22,21 @@ public class Tests {
         new JULLoggingService().testLogging();
     }
 
-    private static void testJCL() {
-        System.out.println("Testing JCL logging.............");
+    private static void testJCL() throws Exception {
         //System.setProperty("org.apache.commons.logging.diagnostics.dest", "STDOUT");
-        new JCLLoggingService().execute();
+        System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
+        new JCLLoggingService().checkConfiguration();
+        new JCLLoggingService().testLogging();
     }
 
-    private static void testLog4jV1() {
-        System.out.println("Testing Log4j V1 logging.............");
-        new Log4jV1LoggingService().execute();
+    private static void testLog4jV1() throws IOException {
+        new Log4jV1LoggingService().checkConfiguration();
+        new Log4jV1LoggingService().testLogging();
     }
 
     private static void testLog4jV2() {
-        System.out.println("Testing Log4j V2 logging.............");
-        new Log4jV2LoggingService().execute();
+        //System.setProperty("log4j2.debug", "true");
+        new Log4jV2LoggingService().checkConfiguration();
+        new Log4jV2LoggingService().testLogging();
     }
 }

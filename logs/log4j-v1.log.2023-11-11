@@ -1,0 +1,8 @@
+[ZXF] 2023-11-11 12:35:51 INFO  [main] Log4jV1LoggingService:15, TraceId=900fe6f5-b593-4f21-9d24-400fcd562047 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2023-11-11 12:35:51 INFO  [main] Log4jV1LoggingService:15, TraceId=900fe6f5-b593-4f21-9d24-400fcd562047 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2023-11-11 12:35:51 WARN  [main] Log4jV1LoggingService:16, TraceId=900fe6f5-b593-4f21-9d24-400fcd562047 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2023-11-11 12:35:51 WARN  [main] Log4jV1LoggingService:16, TraceId=900fe6f5-b593-4f21-9d24-400fcd562047 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2023-11-11 12:35:51 ERROR [main] Log4jV1LoggingService:17, TraceId=900fe6f5-b593-4f21-9d24-400fcd562047 - Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF] 2023-11-11 12:35:51 ERROR [main] Log4jV1LoggingService:17, TraceId=900fe6f5-b593-4f21-9d24-400fcd562047 - Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF] 2023-11-11 12:35:51 FATAL [main] Log4jV1LoggingService:18, TraceId=900fe6f5-b593-4f21-9d24-400fcd562047 - Log4j V1 FATAL message by org.apache.log4j.Logger
+[ZXF] 2023-11-11 12:35:51 FATAL [main] Log4jV1LoggingService:18, TraceId=900fe6f5-b593-4f21-9d24-400fcd562047 - Log4j V1 FATAL message by org.apache.log4j.Logger

@@ -1,4 +1,4 @@
-package zxf.logging.legacy;
+package zxf.logging.legacy.service;
 
 import java.nio.file.Paths;
 import java.util.logging.Level;
@@ -12,9 +12,9 @@ public class JULLoggingService {
         String configClassFromSysProp = System.getProperty("java.util.logging.config.class");
         System.out.println("1.1 Check config class setting from system property java.util.logging.config.class, " + configClassFromSysProp);
         String configFileFromSysProp = System.getProperty("java.util.logging.config.file");
-        System.out.println("1.2 Check config file setting from system property java.util.logging.config.file, " + configFileFromSysProp);
+        System.out.println("1.2 Check config file setting from system property java.util.logging.config.file, as local path, " + configFileFromSysProp);
         String configFileDefault = Paths.get(System.getProperty("java.home"), "conf", "logging.properties").toString();
-        System.out.println("1.3 Check default config file {java.home}/conf/logging.properties, " + configFileDefault);
+        System.out.println("1.3 Check default config file {java.home}/conf/logging.properties, as local path, " + configFileDefault);
     }
 
     public void testLogging() {

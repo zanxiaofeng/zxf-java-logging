@@ -9,8 +9,8 @@
 ## JCL configuration
 ### org.apache.commons.logging.LogFactory
 - org.apache.commons.logging.LogFactory=*******[System Property]
-- classpath:/META-INF/services/org.apache.commons.logging.LogFactory[Resource file, className]
-- classpath:/commons-logging.properties["org.apache.commons.logging.LogFactory=*", priority=*]
+- classpath:META-INF/services/org.apache.commons.logging.LogFactory[Resource file, className]
+- classpath:commons-logging.properties["org.apache.commons.logging.LogFactory=*", priority=*]
 - org.apache.commons.logging.impl.LogFactoryImpl[default log factory implementation]
 ### org.apache.commons.logging.diagnostics.dest
 - org.apache.commons.logging.diagnostics.dest=STDOUT|STDERR[System Property]
@@ -21,12 +21,15 @@
 - classpath:/commons-logging.properties["org.apache.commons.logging.LogFactory=*", priority=*]
 
 ## Log4j V1 configuration
-### Default configuration
-- classpath:/log4j.xml
-- classpath:/log4j.properties
-### Custom configration
+### Default configuration file
+- classpath:log4j.xml
+- classpath:log4j.properties
+### Custom configration file
 - log4j.configuration[System Property]
-- log4j.configuratorClass[System Property]
+## Configuration class selection
+1. From log4j.configuratorClass[System Property]
+2. org.apache.log4j.xml.DOMConfigurator[if fileName end with .xml]
+3. org.apache.log4j.PropertyConfigurator.PropertyConfigurator
 
 ## Log4j V2 configuration
 ## Supported Property Keys
