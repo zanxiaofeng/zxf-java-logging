@@ -9,3 +9,8 @@
 - mvn dependency:purge-local-repository -X -DmanualInclude=org.apache.logging.log4j:log4j-api:2.17.2 -DreResolve=false -Dverbose=true
 ## Delete all artifacts and versions of a specified group by manualInclude
 - mvn dependency:purge-local-repository -X -DmanualInclude=org.apache.logging.log4j -DreResolve=false -Dverbose=true
+
+# Source Code
+- https://github.com/apache/maven-dependency-plugin
+- https://github.com/spring-projects/spring-boot/tree/main/spring-boot-project/spring-boot-tools/spring-boot-maven-plugin
+- https://github.com/apache/maven
