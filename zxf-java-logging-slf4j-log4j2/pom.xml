@@ -44,17 +44,40 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.6.1</version>
                 <executions>
                     <execution>
-                        <id>purge-local-dependencies-of-special</id>
+                        <id>purge-local-dependencies-of-special-by-manual-include</id>
                         <phase>clean</phase>
                         <goals>
                             <goal>purge-local-repository</goal>
                         </goals>
                         <configuration>
+                            <!--
+                                1. include will only delete the jars which current project referred; Delete by dependencies.
+                                2. manualInclude will delete inner or outer jars of current project; Delete by path;
+                            -->
                             <manualIncludes>
                                 <manualInclude>com.fasterxml.jackson.core</manualInclude>
                             </manualIncludes>
+                            <reResolve>false</reResolve>
+                            <verbose>true</verbose>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>purge-local-dependencies-of-special-by-include</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>purge-local-repository</goal>
+                        </goals>
+                        <configuration>
+                            <!--
+                                1. include will only delete the jars which current project referred; Delete by dependencies.
+                                2. manualInclude will delete inner or outer jars of current project; Delete by path;
+                            -->
+                            <includes>
+                                <include>org.apache.logging.log4j</include>
+                            </includes>
                             <reResolve>false</reResolve>
                             <verbose>true</verbose>
                         </configuration>
