@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.example</groupId>
+        <groupId>zxf.example</groupId>
         <artifactId>zxf-java-logging</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -17,4 +17,50 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>zxf.example</groupId>
+            <artifactId>zxf-java-logging-legacy</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- For testing auto purge jackson related jars
+             Please use `maven -X clean' to see detail logs
+        -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.15.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>purge-local-dependencies-of-special</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>purge-local-repository</goal>
+                        </goals>
+                        <configuration>
+                            <manualIncludes>
+                                <manualInclude>com.fasterxml.jackson.core</manualInclude>
+                            </manualIncludes>
+                            <reResolve>false</reResolve>
+                            <verbose>true</verbose>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
