@@ -3,17 +3,26 @@ package zxf.logging.legacy.service;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import zxf.logging.legacy.utils.FileUtils;
+
+import java.io.IOException;
 
 public class Log4jV2LoggingService {
-    public void checkConfiguration() {
+    public void checkConfiguration() throws IOException {
         System.out.println("Checking Log4j V2  Configuration.............");
-//        System.out.println("1.0 Check config setting.............");
-//        String configClassFromSysProp = System.getProperty("java.util.logging.config.class");
-//        System.out.println("1.1 Check config class setting from system property java.util.logging.config.class, " + configClassFromSysProp);
-//        String configFileFromSysProp = System.getProperty("java.util.logging.config.file");
-//        System.out.println("1.2 Check config file setting from system property java.util.logging.config.file, " + configFileFromSysProp);
-//        String configFileDefault = Paths.get(System.getProperty("java.home"), "conf", "logging.properties").toString();
-//        System.out.println("1.3 Check default config file {java.home}/conf/logging.properties, " + configFileDefault);
+        System.out.println("1.0 Check config setting.............");
+        String debugFromSysProp = System.getProperty("log4j2.debug");
+        String loggerContextFactoryFromSysProp = System.getProperty("log4j2.loggerContextFactory");
+        String log4jContextSelectorFromSysProp = System.getProperty("Log4jContextSelector");
+        String configurationFactoryFromSysProp = System.getProperty("log4j.configurationFactory");
+        String configurationFileFromSysProp = System.getProperty("log4j.configurationFile");
+        System.out.println("1.1 Check config from system property, log4j2.debug=" + debugFromSysProp);
+        System.out.println("1.1 Check config from system property, log4j2.loggerContextFactory=" + loggerContextFactoryFromSysProp);
+        System.out.println("1.1 Check config from system property, Log4jContextSelector=" + log4jContextSelectorFromSysProp);
+        System.out.println("1.1 Check config from system property, log4j.configurationFactory=" + configurationFactoryFromSysProp);
+        System.out.println("1.1 Check config from system property, log4j.configurationFile=" + configurationFileFromSysProp);
+        System.out.println("1.2 Check config file from classpath:log4j2.system.properties, " + FileUtils.findClassPathFiles("log4j2.system.properties"));
+        System.out.println("1.3 Check config file from classpath:log4j2.component.properties, " + FileUtils.findClassPathFiles("log4j2.component.properties"));
     }
 
     public void testLogging() {

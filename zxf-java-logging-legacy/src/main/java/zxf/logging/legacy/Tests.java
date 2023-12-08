@@ -34,8 +34,8 @@ public class Tests {
         new Log4jV1LoggingService().testLogging();
     }
 
-    private static void testLog4jV2() {
-        //System.setProperty("log4j2.debug", "true");
+    private static void testLog4jV2() throws IOException {
+        System.setProperty("log4j2.debug", "true");
         new Log4jV2LoggingService().checkConfiguration();
         new Log4jV2LoggingService().testLogging();
     }

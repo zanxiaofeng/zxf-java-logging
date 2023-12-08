@@ -1,4 +1,5 @@
 # Configurations
+
 ## JUL configuration
 ### Default configuration
 - {-D:java.home}/conf/logging.properties
@@ -33,20 +34,21 @@
 3. org.apache.log4j.PropertyConfigurator.PropertyConfigurator
 
 ## Log4j V2 configuration
-## Supported Property Keys
+### Supported Property Keys
 - log4j2.loggerContextFactory=****[Property]
 - log4j2.debug=false[Property]
 - Log4jContextSelector=****[Property]
 - log4j.configurationFactory=*****[Property]
 - log4j.configurationFile=*****[Property]
-## System Properties
+### System Properties
 - Include Supported Property Keys
-## classpath:log4j2.system.properties
+### classpath:log4j2.system.properties
 - Include Supported Property Keys
-## classpath:log4j2.component.properties
+### classpath:log4j2.component.properties
 - Include Supported Property Keys
 
 # Key Classes
+
 ## JUL Key Classes
 - java.util.logging.Logger
 - java.util.logging.LogManager
@@ -56,10 +58,12 @@
 - java.util.logging.Formatter
 - java.util.logging.SimpleFormatter
 - java.util.logging.XMLFormatter
+
 ## JCL Key Classes
 - org.apache.commons.logging.Log
 - org.apache.commons.logging.LogFactory.getLog(<class>)
 - org.apache.commons.logging.impl.LogFactoryImpl.discoverLogImplementation(String logCategory)
+
 ## Log4j V1 Key Classes
 - org.apache.log4j.Level
 - org.apache.log4j.Logger
@@ -75,12 +79,13 @@
 ## Log4j V2 Key Classes
 - org.apache.logging.log4j.Logger;
 - org.apache.logging.log4j.LogManager;
+- org.apache.logging.log4j.util.ProviderUtil
 - org.apache.logging.log4j.util.PropertiesUtil
 - org.apache.logging.log4j.util.PropertiesUtil.Environment
-- org.apache.logging.log4j.spi.LoggerContextFactory
-- org.apache.logging.log4j.simple.SimpleLoggerContextFactory
-- org.apache.logging.slf4j.SLF4JLoggerContextFactory
-- org.apache.logging.log4j.core.impl.Log4jContextFactory
+- org.apache.logging.log4j.spi.LoggerContextFactory[log4j-api, interface]
+- org.apache.logging.log4j.simple.SimpleLoggerContextFactory[log4j-api]
+- org.apache.logging.slf4j.SLF4JLoggerContextFactory[log4j-to-slf4j]
+- org.apache.logging.log4j.core.impl.Log4jContextFactory[log4j-core]
 - org.apache.logging.log4j.core.config.ConfigurationFactory(ConfigurationFactory getInstance())
 - org.apache.logging.log4j.core.config.ConfigurationFactory.Factory(Configuration getConfiguration(****))
 - org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory
