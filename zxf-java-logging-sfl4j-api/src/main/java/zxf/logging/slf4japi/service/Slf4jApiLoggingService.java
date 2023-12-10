@@ -12,10 +12,8 @@ public class Slf4jApiLoggingService {
 
     public void checkConfiguration() throws IOException {
         System.out.println("Checking SLF4J API Configuration.............");
-        System.out.println("1.0 Check config file setting.............");
-        String providerFromSysProp = System.getProperty("slf4j.provider");
-        System.out.println("1.1 Check provider from system property slf4j.provider, " + providerFromSysProp);
-        System.out.println("1.2 Check provider from classpath:META-INF/services/org.slf4j.spi.SLF4JServiceProvider, " + FileUtils.findClassPathFiles("META-INF/services/org.slf4j.spi.SLF4JServiceProvider"));
+        System.out.println("1.0 Check config setting.............");
+        System.out.println("1.1 Check binder from classpath:org/slf4j/impl/StaticLoggerBinder.class, " + FileUtils.findClassPathFiles("org/slf4j/impl/StaticLoggerBinder.class"));
        }
 
     public void testLogging() {

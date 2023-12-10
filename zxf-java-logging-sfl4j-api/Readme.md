@@ -1,11 +1,11 @@
 # Configurations
-- slf4j.provider[System Property]
-- classpath:META-INF/services/org.slf4j.spi.SLF4JServiceProvider[Provider]
+- classpath:org/slf4j/impl/StaticLoggerBinder.class
 
 # Key Classes
 - org.slf4j.Logger;
 - org.slf4j.LoggerFactory;
 - org.slf4j.MDC;
-- org.slf4j.spi.SLF4JServiceProvider
-- org.slf4j.helpers.SubstituteServiceProvider
-- org.slf4j.helpers.NOP_FallbackServiceProvider[Default]
+- org.slf4j.ILoggerFactory
+- org.slf4j.helpers.NOPLoggerFactory
+- org.slf4j.helpers.SubstituteLoggerFactory
+- ch.qos.logback.classic.LoggerContext
