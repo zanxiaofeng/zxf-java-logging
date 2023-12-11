@@ -1,5 +1,7 @@
 # Configurations
-- classpath:org/slf4j/impl/StaticLoggerBinder.class
+- org.slf4j.impl.StaticLoggerBinder
+- org.slf4j.impl.StaticMDCBinder
+- org.slf4j.impl.StaticMarkerBinder
 
 # Key Classes
 - org.slf4j.LoggerFactory;
@@ -13,3 +15,4 @@
 - org.slf4j.helpers.NOPLoggerFactory
 - org.slf4j.helpers.SubstituteLoggerFactory
 - ch.qos.logback.classic.LoggerContext
+- org.slf4j.impl.StaticMarkerBinder

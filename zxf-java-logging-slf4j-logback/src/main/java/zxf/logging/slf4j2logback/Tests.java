@@ -4,12 +4,14 @@ import zxf.logging.legacy.service.JCLLoggingService;
 import zxf.logging.legacy.service.JULLoggingService;
 import zxf.logging.legacy.service.Log4jV1LoggingService;
 import zxf.logging.legacy.service.Log4jV2LoggingService;
+import zxf.logging.slf4j2logback.service.LogbackLoggingService;
 import zxf.logging.slf4japi.service.Slf4jApiLoggingService;
 
 import java.io.IOException;
 
 public class Tests {
     public static void main(String[] args) throws Exception {
+        testLogback();
         testJUL();
         testJCL();
         testLog4jV1();
@@ -17,15 +19,19 @@ public class Tests {
         testSLF4j();
     }
 
+    private static void testLogback() throws IOException {
+        new LogbackLoggingService().checkConfiguration();
+    }
+
     private static void testJUL() {
-        System.setProperty("java.util.logging.config.file", "./zxf-java-logging-legacy/src/main/resources/jul.logging.properties");
+        //System.setProperty("java.util.logging.config.file", "./zxf-java-logging-legacy/src/main/resources/jul.logging.properties");
         new JULLoggingService().checkConfiguration();
         new JULLoggingService().testLogging();
     }
 
     private static void testJCL() throws Exception {
         //System.setProperty("org.apache.commons.logging.diagnostics.dest", "STDOUT");
-        System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
+        //System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
         new JCLLoggingService().checkConfiguration();
         new JCLLoggingService().testLogging();
     }
@@ -36,7 +42,7 @@ public class Tests {
     }
 
     private static void testLog4jV2() throws IOException {
-        System.setProperty("log4j2.debug", "true");
+        //System.setProperty("log4j2.debug", "true");
         new Log4jV2LoggingService().checkConfiguration();
         new Log4jV2LoggingService().testLogging();
     }
