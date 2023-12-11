@@ -15,7 +15,7 @@ public class Slf4jApiLoggingService {
         System.out.println("1.0 Check config setting.............");
         System.out.println("1.1 Check StaticMDCBinder from classpath:org/slf4j/impl/StaticMDCBinder.class, " + FileUtils.findClassPathFiles("org/slf4j/impl/StaticMDCBinder.class"));
         System.out.println("1.2 Check StaticLoggerBinder from classpath:org/slf4j/impl/StaticLoggerBinder.class, " + FileUtils.findClassPathFiles("org/slf4j/impl/StaticLoggerBinder.class"));
-       }
+    }
 
     public void testLogging() {
         System.out.println("Testing SLF4J API logging.............");

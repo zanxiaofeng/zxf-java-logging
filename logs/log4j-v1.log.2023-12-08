@@ -1,0 +1,16 @@
+[ZXF] 2023-12-08 08:05:34 INFO  [main] Log4jV1LoggingService:32, TraceId=555153e8-a74c-4103-9a31-c2c1a44da5eb - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:05:34 INFO  [main] Log4jV1LoggingService:32, TraceId=555153e8-a74c-4103-9a31-c2c1a44da5eb - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:05:34 WARN  [main] Log4jV1LoggingService:33, TraceId=555153e8-a74c-4103-9a31-c2c1a44da5eb - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:05:34 WARN  [main] Log4jV1LoggingService:33, TraceId=555153e8-a74c-4103-9a31-c2c1a44da5eb - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:05:34 ERROR [main] Log4jV1LoggingService:34, TraceId=555153e8-a74c-4103-9a31-c2c1a44da5eb - Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:05:34 ERROR [main] Log4jV1LoggingService:34, TraceId=555153e8-a74c-4103-9a31-c2c1a44da5eb - Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:05:34 FATAL [main] Log4jV1LoggingService:35, TraceId=555153e8-a74c-4103-9a31-c2c1a44da5eb - Log4j V1 FATAL message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:05:34 FATAL [main] Log4jV1LoggingService:35, TraceId=555153e8-a74c-4103-9a31-c2c1a44da5eb - Log4j V1 FATAL message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:38:26 INFO  [main] Log4jV1LoggingService:32, TraceId=062778e9-1223-4da4-9e52-c41f7f7b786d - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:38:26 INFO  [main] Log4jV1LoggingService:32, TraceId=062778e9-1223-4da4-9e52-c41f7f7b786d - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:38:26 WARN  [main] Log4jV1LoggingService:33, TraceId=062778e9-1223-4da4-9e52-c41f7f7b786d - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:38:26 WARN  [main] Log4jV1LoggingService:33, TraceId=062778e9-1223-4da4-9e52-c41f7f7b786d - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:38:26 ERROR [main] Log4jV1LoggingService:34, TraceId=062778e9-1223-4da4-9e52-c41f7f7b786d - Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:38:26 ERROR [main] Log4jV1LoggingService:34, TraceId=062778e9-1223-4da4-9e52-c41f7f7b786d - Log4j V1 ERROR message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:38:26 FATAL [main] Log4jV1LoggingService:35, TraceId=062778e9-1223-4da4-9e52-c41f7f7b786d - Log4j V1 FATAL message by org.apache.log4j.Logger
+[ZXF] 2023-12-08 08:38:26 FATAL [main] Log4jV1LoggingService:35, TraceId=062778e9-1223-4da4-9e52-c41f7f7b786d - Log4j V1 FATAL message by org.apache.log4j.Logger
