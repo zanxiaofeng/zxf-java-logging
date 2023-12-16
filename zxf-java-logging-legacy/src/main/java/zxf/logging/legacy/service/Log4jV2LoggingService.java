@@ -25,8 +25,11 @@ public class Log4jV2LoggingService {
         System.out.println("1.3 Check config file from classpath:log4j2.component.properties, " + FileUtils.findClassPathFiles("log4j2.component.properties"));
     }
 
-    public void testLogging() {
-        System.out.println("Testing Log4j V2 logging.............");
+    public void testLogging(Boolean debug) {
+        if (debug) {
+            System.setProperty("log4j2.debug", "true");
+        }
+        System.out.println(String.format("Testing Log4j V2 logging, debug=%s.............", debug));
         Logger logger = LogManager.getLogger(Log4jV2LoggingService.class);
         logger.trace("Log4j V2 TRACE message by " + logger.getClass().getName());
         logger.debug("Log4j V2 DEBUG message by " + logger.getClass().getName());

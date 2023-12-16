@@ -17,8 +17,8 @@ public class JULLoggingService {
         System.out.println("1.3 Check default config file {java.home}/conf/logging.properties, as local path, " + configFileDefault);
     }
 
-    public void testLogging() {
-        System.out.println("Testing JUL logging.............");
+    public void testLogging(Boolean debug) {
+        System.out.println(String.format("Testing JUL logging, debug=%s.............", debug));
         Logger logger = Logger.getLogger(JULLoggingService.class.getName());
         logger.log(Level.FINEST, "JUL FINEST message by " + logger.getClass().getName());
         logger.log(Level.FINER, "JUL FINER message by " + logger.getClass().getName());

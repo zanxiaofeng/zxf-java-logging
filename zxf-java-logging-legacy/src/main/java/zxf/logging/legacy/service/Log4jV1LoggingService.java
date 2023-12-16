@@ -23,8 +23,8 @@ public class Log4jV1LoggingService {
         System.out.println("2.2 Log4j V1 will select config class by config file automatically");
     }
 
-    public void testLogging() {
-        System.out.println("Testing Log4j V1 logging.............");
+    public void testLogging(Boolean debug) {
+        System.out.println(String.format("Testing Log4j V1 logging, debug=%s.............", debug));
         MDC.put("TraceId", UUID.randomUUID().toString());
         Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
         logger.trace("Log4j V1 TRACE message by " + logger.getClass().getName());

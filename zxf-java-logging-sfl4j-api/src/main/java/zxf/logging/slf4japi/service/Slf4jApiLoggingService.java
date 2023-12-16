@@ -17,8 +17,8 @@ public class Slf4jApiLoggingService {
         System.out.println("1.2 Check StaticLoggerBinder from classpath:org/slf4j/impl/StaticLoggerBinder.class, " + FileUtils.findClassPathFiles("org/slf4j/impl/StaticLoggerBinder.class"));
     }
 
-    public void testLogging() {
-        System.out.println("Testing SLF4J API logging.............");
+    public void testLogging(Boolean debug) {
+        System.out.println(String.format("Testing SLF4J API logging, debug=%s.............", debug));
         MDC.put("TraceId", UUID.randomUUID().toString());
         Logger logger = LoggerFactory.getLogger(Slf4jApiLoggingService.class);
         logger.trace("SLF4J API TRACE message by {}", logger.getClass().getName());

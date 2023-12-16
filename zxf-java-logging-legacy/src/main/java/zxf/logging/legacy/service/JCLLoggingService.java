@@ -32,8 +32,11 @@ public class JCLLoggingService {
         System.out.println("4.1 Check Other setting from classpath:commons-logging.properties, " + FileUtils.findClassPathFiles("commons-logging.properties"));
     }
 
-    public void testLogging() {
-        System.out.println("Testing JCL logging.............");
+    public void testLogging(Boolean debug) {
+        if (debug) {
+            System.setProperty("org.apache.commons.logging.diagnostics.dest", "STDOUT");
+        }
+        System.out.println(String.format("Testing JCL logging, debug=%s.............", debug));
         Log log = LogFactory.getLog(JCLLoggingService.class.getName());
         log.trace("JCL TRACE message by " + log.getClass().getName());
         log.debug("JCL DEBUG message by " + log.getClass().getName());

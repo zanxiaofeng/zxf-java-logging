@@ -19,24 +19,22 @@ public class Tests {
     private static void testJUL() {
         System.setProperty("java.util.logging.config.file", "./zxf-java-logging-legacy/src/main/resources/jul.logging.properties");
         new JULLoggingService().checkConfiguration();
-        new JULLoggingService().testLogging();
+        new JULLoggingService().testLogging(true);
     }
 
     private static void testJCL() throws Exception {
-        //System.setProperty("org.apache.commons.logging.diagnostics.dest", "STDOUT");
         System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
         new JCLLoggingService().checkConfiguration();
-        new JCLLoggingService().testLogging();
+        new JCLLoggingService().testLogging(true);
     }
 
     private static void testLog4jV1() throws IOException {
         new Log4jV1LoggingService().checkConfiguration();
-        new Log4jV1LoggingService().testLogging();
+        new Log4jV1LoggingService().testLogging(true);
     }
 
     private static void testLog4jV2() throws IOException {
-        System.setProperty("log4j2.debug", "true");
         new Log4jV2LoggingService().checkConfiguration();
-        new Log4jV2LoggingService().testLogging();
+        new Log4jV2LoggingService().testLogging(true);
     }
 }
