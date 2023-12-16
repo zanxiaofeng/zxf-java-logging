@@ -24,13 +24,11 @@ public class Tests {
     }
 
     private static void testJUL() {
-        //System.setProperty("java.util.logging.config.file", "./zxf-java-logging-legacy/src/main/resources/jul.logging.properties");
         new JULLoggingService().checkConfiguration();
         new JULLoggingService().testLogging(false);
     }
 
     private static void testJCL() throws Exception {
-        //System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
         new JCLLoggingService().checkConfiguration();
         new JCLLoggingService().testLogging(false);
     }
