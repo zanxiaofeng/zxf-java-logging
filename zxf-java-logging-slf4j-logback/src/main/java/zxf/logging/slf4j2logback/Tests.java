@@ -1,5 +1,6 @@
 package zxf.logging.slf4j2logback;
 
+import org.slf4j.bridge.SLF4JBridgeHandler;
 import zxf.logging.legacy.service.JCLLoggingService;
 import zxf.logging.legacy.service.JULLoggingService;
 import zxf.logging.legacy.service.Log4jV1LoggingService;
@@ -24,6 +25,8 @@ public class Tests {
     }
 
     private static void testJUL() {
+        SLF4JBridgeHandler.removeHandlersForRootLogger();
+        SLF4JBridgeHandler.install();
         new JULLoggingService().checkConfiguration();
         new JULLoggingService().testLogging(false);
     }

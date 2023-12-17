@@ -10,7 +10,7 @@ import java.util.UUID;
 
 public class Log4jV1LoggingService {
     public void checkConfiguration() throws IOException {
-        System.out.println("Checking Log4j V1  Configuration.............");
+        System.out.println("Checking Log4j V1 Configuration.............");
         System.out.println("1.0 Check config file setting.............");
         String configFileFromSysProp = System.getProperty("log4j.configuration");
         System.out.println("1.1 Check config file setting from system property log4j.configuration, as url path or classpath:, " + configFileFromSysProp);

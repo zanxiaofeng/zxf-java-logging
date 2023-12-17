@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Log4jV2LoggingService {
     public void checkConfiguration() throws IOException {
-        System.out.println("Checking Log4j V2  Configuration.............");
+        System.out.println("Checking Log4j V2 Configuration.............");
         System.out.println("1.0 Check config setting.............");
         String debugFromSysProp = System.getProperty("log4j2.debug");
         String loggerContextFactoryFromSysProp = System.getProperty("log4j2.loggerContextFactory");
