@@ -21,8 +21,14 @@ public class Log4jV2LoggingService {
         System.out.println("1.1 Check config from system property, Log4jContextSelector=" + log4jContextSelectorFromSysProp);
         System.out.println("1.1 Check config from system property, log4j.configurationFactory=" + configurationFactoryFromSysProp);
         System.out.println("1.1 Check config from system property, log4j.configurationFile=" + configurationFileFromSysProp);
-        System.out.println("1.2 Check config file from classpath:log4j2.system.properties, " + FileUtils.findClassPathFiles("log4j2.system.properties"));
-        System.out.println("1.3 Check config file from classpath:log4j2.component.properties, " + FileUtils.findClassPathFiles("log4j2.component.properties"));
+        System.out.println("1.2 Check config from classpath:log4j2.system.properties, " + FileUtils.findClassPathFiles("log4j2.system.properties"));
+        System.out.println("1.3 Check config from classpath:log4j2.component.properties, " + FileUtils.findClassPathFiles("log4j2.component.properties"));
+        System.out.println("1.4 Check config file classpath:log4j2.properties, " + FileUtils.findClassPathFiles("log4j2.properties"));
+        System.out.println("1.4 Check config file classpath:log4j2.xml, " + FileUtils.findClassPathFiles("log4j2.xml"));
+        System.out.println("1.4 Check config file classpath:log4j2.json, " + FileUtils.findClassPathFiles("log4j2.json"));
+        System.out.println("1.4 Check config file classpath:log4j2.jsn, " + FileUtils.findClassPathFiles("log4j2.jsn"));
+        System.out.println("1.4 Check config file classpath:log4j2.yml, " + FileUtils.findClassPathFiles("log4j2.yml"));
+        System.out.println("1.4 Check config file classpath:log4j2.yaml, " + FileUtils.findClassPathFiles("log4j2.yaml"));
     }
 
     public void testLogging(Boolean debug) {

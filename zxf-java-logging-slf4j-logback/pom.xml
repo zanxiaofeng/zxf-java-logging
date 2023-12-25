@@ -82,7 +82,6 @@
             <version>${jcl.version}</version>
             <scope>provided</scope>
         </dependency>
-
         <!--将slf4j转log4j、log4j2、JUL、JCL的桥接包设置为provided，不打入包中-->
         <dependency>
             <groupId>org.slf4j</groupId>

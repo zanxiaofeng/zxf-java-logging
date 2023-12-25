@@ -88,7 +88,7 @@
 - org.apache.logging.log4j.core.impl.Log4jContextFactory[log4j-core]
 - org.apache.logging.log4j.core.config.ConfigurationFactory(ConfigurationFactory getInstance())
 - org.apache.logging.log4j.core.config.ConfigurationFactory.Factory(Configuration getConfiguration(****))
-- org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory
-- org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory
-- org.apache.logging.log4j.core.config.json.JsonConfigurationFactory
-- org.apache.logging.log4j.core.config.yaml.YamlConfigurationFactory
+- org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory[log4j2.properties]
+- org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory[log4j2.xml]
+- org.apache.logging.log4j.core.config.json.JsonConfigurationFactory[log4j2.json,log4j2.jsn]
+- org.apache.logging.log4j.core.config.yaml.YamlConfigurationFactory[log4j2.yml,log4j2.yaml]
