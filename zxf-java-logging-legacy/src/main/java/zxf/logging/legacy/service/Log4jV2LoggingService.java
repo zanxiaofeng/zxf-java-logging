@@ -45,6 +45,7 @@ public class Log4jV2LoggingService {
         logger.warn("Log4j V2 WARN message by " + logger.getClass().getName());
         logger.error("Log4j V2 ERROR message by " + logger.getClass().getName());
         logger.fatal("Log4j V2 FATAL message by " + logger.getClass().getName());
-        ThreadContext.clearAll();
+        ThreadContext.remove("TraceId");
+        //ThreadContext.clearAll();
     }
 }

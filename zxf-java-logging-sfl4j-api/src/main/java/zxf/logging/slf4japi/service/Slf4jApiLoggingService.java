@@ -26,6 +26,7 @@ public class Slf4jApiLoggingService {
         logger.info("SLF4J API INFO message by {}", logger.getClass().getName());
         logger.warn("SLF4J API WARN message by {}", logger.getClass().getName());
         logger.error("SLF4J API ERROR message by {}", logger.getClass().getName());
-        MDC.clear();
+        MDC.remove("TraceId");
+        //MDC.clear();
     }
 }

@@ -1,5 +1,6 @@
 package zxf.logging.slf4j2logback;
 
+import org.slf4j.MDC;
 import org.slf4j.bridge.SLF4JBridgeHandler;
 import zxf.logging.legacy.service.JCLLoggingService;
 import zxf.logging.legacy.service.JULLoggingService;
@@ -9,15 +10,19 @@ import zxf.logging.slf4j2logback.service.LogbackLoggingService;
 import zxf.logging.slf4japi.service.Slf4jApiLoggingService;
 
 import java.io.IOException;
+import java.util.UUID;
 
 public class Tests {
     public static void main(String[] args) throws Exception {
+        MDC.put("GlobalId", "slf4j-" + UUID.randomUUID());
         testLogback();
         testJUL();
         testJCL();
         testLog4jV1();
         testLog4jV2();
         testSLF4j();
+        MDC.remove("GlobalId");
+        //MDC.clear();
     }
 
     private static void testLogback() throws IOException {

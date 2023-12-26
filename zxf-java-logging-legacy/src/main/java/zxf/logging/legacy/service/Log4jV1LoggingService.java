@@ -33,6 +33,7 @@ public class Log4jV1LoggingService {
         logger.warn("Log4j V1 WARN message by " + logger.getClass().getName());
         logger.error("Log4j V1 ERROR message by " + logger.getClass().getName());
         logger.fatal("Log4j V1 FATAL message by " + logger.getClass().getName());
-        MDC.clear();
+        MDC.remove("TraceId");
+        //MDC.clear();
     }
 }
