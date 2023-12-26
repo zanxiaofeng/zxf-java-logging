@@ -1,11 +1,12 @@
 package zxf.logging.legacy.service;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
 import zxf.logging.legacy.utils.FileUtils;
 
 import java.io.IOException;
+import java.util.UUID;
 
 public class Log4jV2LoggingService {
     public void checkConfiguration() throws IOException {
@@ -36,6 +37,7 @@ public class Log4jV2LoggingService {
             System.setProperty("log4j2.debug", "true");
         }
         System.out.println(String.format("Testing Log4j V2 logging, debug=%s.............", debug));
+        ThreadContext.put("TraceId", "log4j2-" + UUID.randomUUID().toString());
         Logger logger = LogManager.getLogger(Log4jV2LoggingService.class);
         logger.trace("Log4j V2 TRACE message by " + logger.getClass().getName());
         logger.debug("Log4j V2 DEBUG message by " + logger.getClass().getName());
@@ -43,5 +45,6 @@ public class Log4jV2LoggingService {
         logger.warn("Log4j V2 WARN message by " + logger.getClass().getName());
         logger.error("Log4j V2 ERROR message by " + logger.getClass().getName());
         logger.fatal("Log4j V2 FATAL message by " + logger.getClass().getName());
+        ThreadContext.clearAll();
     }
 }

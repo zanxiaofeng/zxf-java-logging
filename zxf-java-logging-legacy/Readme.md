@@ -79,6 +79,7 @@
 ## Log4j V2 Key Classes
 - org.apache.logging.log4j.Logger;
 - org.apache.logging.log4j.LogManager;
+- org.apache.logging.log4j.ThreadContext
 - org.apache.logging.log4j.util.ProviderUtil
 - org.apache.logging.log4j.util.PropertiesUtil
 - org.apache.logging.log4j.util.PropertiesUtil.Environment

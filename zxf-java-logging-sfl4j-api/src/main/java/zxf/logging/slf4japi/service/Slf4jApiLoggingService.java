@@ -19,12 +19,13 @@ public class Slf4jApiLoggingService {
 
     public void testLogging(Boolean debug) {
         System.out.println(String.format("Testing SLF4J API logging, debug=%s.............", debug));
-        MDC.put("TraceId", UUID.randomUUID().toString());
+        MDC.put("TraceId", "slf4j-" + UUID.randomUUID().toString());
         Logger logger = LoggerFactory.getLogger(Slf4jApiLoggingService.class);
         logger.trace("SLF4J API TRACE message by {}", logger.getClass().getName());
         logger.debug("SLF4J API DEBUG message by {}", logger.getClass().getName());
         logger.info("SLF4J API INFO message by {}", logger.getClass().getName());
         logger.warn("SLF4J API WARN message by {}", logger.getClass().getName());
         logger.error("SLF4J API ERROR message by {}", logger.getClass().getName());
+        MDC.clear();
     }
 }
