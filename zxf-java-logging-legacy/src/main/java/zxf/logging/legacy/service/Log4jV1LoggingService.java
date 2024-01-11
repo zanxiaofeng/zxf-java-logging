@@ -25,7 +25,7 @@ public class Log4jV1LoggingService {
 
     public void testLogging(Boolean debug) {
         System.out.println(String.format("Testing Log4j V1 logging, debug=%s.............", debug));
-        MDC.put("TraceId", "log4j1-" + UUID.randomUUID().toString());
+        MDC.put("TraceId", "log4j1-" + Long.toString(System.currentTimeMillis(),36));
         Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
         logger.trace("Log4j V1 TRACE message by " + logger.getClass().getName());
         logger.debug("Log4j V1 DEBUG message by " + logger.getClass().getName());
