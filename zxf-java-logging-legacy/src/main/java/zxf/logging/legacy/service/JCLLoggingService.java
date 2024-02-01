@@ -39,10 +39,12 @@ public class JCLLoggingService {
         System.out.println(String.format("Testing JCL logging, debug=%s.............", debug));
         Log log = LogFactory.getLog(JCLLoggingService.class.getName());
         log.trace("JCL TRACE message by " + log.getClass().getName());
-        log.debug("JCL DEBUG message by " + log.getClass().getName());
+        if (log.isDebugEnabled()) {
+            log.debug("JCL DEBUG message by " + log.getClass().getName(), new RuntimeException("JCL debug"));
+        }
         log.info("JCL INFO message by " + log.getClass().getName());
         log.warn("JCL WARN message by " + log.getClass().getName());
-        log.error("JCL ERROR message by " + log.getClass().getName());
-        log.fatal("JCL FATAL message by " + log.getClass().getName());
+        log.error("JCL ERROR message by " + log.getClass().getName(), new RuntimeException("JCL error"));
+        log.fatal("JCL FATAL message by " + log.getClass().getName(), new RuntimeException("JCL fatal"));
     }
 }

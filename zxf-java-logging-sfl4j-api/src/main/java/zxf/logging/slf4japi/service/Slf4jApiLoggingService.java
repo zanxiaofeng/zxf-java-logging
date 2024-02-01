@@ -22,10 +22,12 @@ public class Slf4jApiLoggingService {
         MDC.put("TraceId", "slf4j-" + UUID.randomUUID().toString());
         Logger logger = LoggerFactory.getLogger(Slf4jApiLoggingService.class);
         logger.trace("SLF4J API TRACE message by {}", logger.getClass().getName());
-        logger.debug("SLF4J API DEBUG message by {}", logger.getClass().getName());
+        if (logger.isDebugEnabled()) {
+            logger.debug("SLF4J API DEBUG message by {}", logger.getClass().getName(), new RuntimeException("SLF4J debug"));
+        }
         logger.info("SLF4J API INFO message by {}", logger.getClass().getName());
         logger.warn("SLF4J API WARN message by {}", logger.getClass().getName());
-        logger.error("SLF4J API ERROR message by {}", logger.getClass().getName());
+        logger.error("SLF4J API ERROR message by {}", logger.getClass().getName(), new RuntimeException("SLF4J error"));
         MDC.remove("TraceId");
         //MDC.clear();
     }

@@ -25,14 +25,16 @@ public class Log4jV1LoggingService {
 
     public void testLogging(Boolean debug) {
         System.out.println(String.format("Testing Log4j V1 logging, debug=%s.............", debug));
-        MDC.put("TraceId", "log4j1-" + Long.toString(System.currentTimeMillis(),36));
+        MDC.put("TraceId", "log4j1-" + Long.toString(System.currentTimeMillis(), 36));
         Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
         logger.trace("Log4j V1 TRACE message by " + logger.getClass().getName());
-        logger.debug("Log4j V1 DEBUG message by " + logger.getClass().getName());
+        if (logger.isDebugEnabled()) {
+            logger.debug("Log4j V1 DEBUG message by " + logger.getClass().getName(), new RuntimeException("LOG4j1 debug"));
+        }
         logger.info("Log4j V1 INFO message by " + logger.getClass().getName());
         logger.warn("Log4j V1 WARN message by " + logger.getClass().getName());
-        logger.error("Log4j V1 ERROR message by " + logger.getClass().getName());
-        logger.fatal("Log4j V1 FATAL message by " + logger.getClass().getName());
+        logger.error("Log4j V1 ERROR message by " + logger.getClass().getName(), new RuntimeException("LOG4J1 error"));
+        logger.fatal("Log4j V1 FATAL message by " + logger.getClass().getName(), new RuntimeException("LOG4J1 fatal"));
         MDC.remove("TraceId");
         //MDC.clear();
     }

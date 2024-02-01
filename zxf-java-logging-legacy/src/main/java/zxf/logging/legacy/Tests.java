@@ -1,5 +1,6 @@
 package zxf.logging.legacy;
 
+import org.apache.commons.logging.impl.SimpleLog;
 import zxf.logging.legacy.service.JCLLoggingService;
 import zxf.logging.legacy.service.JULLoggingService;
 import zxf.logging.legacy.service.Log4jV1LoggingService;
@@ -23,7 +24,7 @@ public class Tests {
     }
 
     private static void testJCL() throws Exception {
-        System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
+        //System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
         new JCLLoggingService().checkConfiguration();
         new JCLLoggingService().testLogging(true);
     }
