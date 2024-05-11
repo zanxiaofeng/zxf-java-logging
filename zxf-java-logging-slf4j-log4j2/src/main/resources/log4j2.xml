@@ -6,7 +6,8 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Root level="DEBUG">
+        <Logger name="org.apache" level="${env:3RD_PARTY_LEVEL:-INFO}"/>
+        <Root level="${env:DEFAULT_LEVEL:-DEBUG}">
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>
