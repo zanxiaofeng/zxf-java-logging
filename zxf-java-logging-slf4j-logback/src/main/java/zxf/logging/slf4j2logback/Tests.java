@@ -10,6 +10,7 @@ import zxf.logging.slf4j2logback.service.LogbackLoggingService;
 import zxf.logging.slf4japi.service.Slf4jApiLoggingService;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.UUID;
 
 public class Tests {
@@ -23,6 +24,7 @@ public class Tests {
         testSLF4j();
         MDC.remove("GlobalId");
         //MDC.clear();
+
     }
 
     private static void testLogback() throws IOException {
