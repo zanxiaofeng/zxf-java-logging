@@ -10,7 +10,6 @@ import zxf.logging.slf4j2logback.service.LogbackLoggingService;
 import zxf.logging.slf4japi.service.Slf4jApiLoggingService;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.UUID;
 
 public class Tests {
@@ -24,7 +23,6 @@ public class Tests {
         testSLF4j();
         MDC.remove("GlobalId");
         //MDC.clear();
-
     }
 
     private static void testLogback() throws IOException {
@@ -34,6 +32,11 @@ public class Tests {
     private static void testJUL() {
         SLF4JBridgeHandler.removeHandlersForRootLogger();
         SLF4JBridgeHandler.install();
+
+        //Set jul level by JUL logger: FINEST == TRACE
+        java.util.logging.Logger logger = java.util.logging.Logger.getLogger("zxf.logging.legacy");
+        logger.setLevel(java.util.logging.Level.FINEST);
+
         new JULLoggingService().checkConfiguration();
         new JULLoggingService().testLogging(false);
     }

@@ -26,7 +26,7 @@ public class Tests {
     private static void testJUL() {
         SLF4JBridgeHandler.removeHandlersForRootLogger();
         SLF4JBridgeHandler.install();
-        //Set jul level by JUL logger
+        //Set jul level by JUL logger: FINEST == TRACE
         java.util.logging.Logger logger = java.util.logging.Logger.getLogger("zxf.logging.legacy");
         logger.setLevel(java.util.logging.Level.FINEST);
 
