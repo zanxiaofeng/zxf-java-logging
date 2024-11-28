@@ -6,8 +6,12 @@
         </Console>
     </Appenders>
     <Loggers>
-        <!-- env does not work -->
+        <!-- Disable logging for a package or class -->
+        <Logger name="com.example.SpecialClass" level="OFF"/>
+
+        <!-- ENV does not work -->
         <Logger name="org.apache" level="${env:3RD_PARTY_LEVEL:-INFO}"/>
+
         <Root level="TRACE">
             <AppenderRef ref="Console"/>
         </Root>
