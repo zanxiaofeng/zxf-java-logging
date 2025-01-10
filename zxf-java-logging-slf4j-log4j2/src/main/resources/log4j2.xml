@@ -10,7 +10,10 @@
         <Logger name="com.example.SpecialClass" level="OFF"/>
 
         <!-- ENV does not work -->
-        <Logger name="org.apache" level="${env:3RD_PARTY_LEVEL:-INFO}"/>
+        <Logger name="org.apache" level="${env:3RD_PARTY_LEVEL:-INFO}">
+            <!-- Do not add duplicate appender here-->
+            <!-- <AppenderRef ref="Console"/>-->
+        </Logger>
 
         <Root level="TRACE">
             <AppenderRef ref="Console"/>
