@@ -1,13 +1,13 @@
 package zxf.logging.springboot;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
 
 
-@Slf4j
+@CommonsLog
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
