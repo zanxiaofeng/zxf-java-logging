@@ -16,7 +16,7 @@ public class JulService {
 
     public void setLevel() {
         Logger logger = Logger.getLogger("my.app");
-        logger.setLevel(Level.INFO);
+        logger.setLevel(Level.FINEST);
         log.info("Jul Logger Level: {}", logger.getLevel());
     }
 }

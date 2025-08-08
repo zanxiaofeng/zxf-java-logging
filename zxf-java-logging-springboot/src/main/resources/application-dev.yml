@@ -3,5 +3,6 @@ logging:
     console: ZXF-DEV %d{yyyy-MM-dd HH:mm:ss.SSS} - TraceId=%X{TraceId} %-5level [%thread] %logger{36} - %msg%n
   level:
     root: info
+    my.app: debug
     org.springframework: debug
     zxf.logging.springboot: debug

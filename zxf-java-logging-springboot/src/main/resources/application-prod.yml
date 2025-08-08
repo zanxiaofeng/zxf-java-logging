@@ -3,4 +3,5 @@ logging:
     console: ZXF-PROD %d{yyyy-MM-dd HH:mm:ss.SSS} - TraceId=%X{TraceId} %-5level [%thread] %logger{36} - %msg%n
   level:
     root: error
+    my.app: info
     zxf.logging.springboot: info
