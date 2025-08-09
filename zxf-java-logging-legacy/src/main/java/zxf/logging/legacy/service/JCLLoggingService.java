@@ -5,8 +5,6 @@ import org.apache.commons.logging.LogFactory;
 import zxf.logging.legacy.utils.FileUtils;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.Enumeration;
 
 public class JCLLoggingService {
 
@@ -46,5 +44,9 @@ public class JCLLoggingService {
         log.warn("JCL WARN message by " + log.getClass().getName());
         log.error("JCL ERROR message by " + log.getClass().getName(), new RuntimeException("JCL error"));
         log.fatal("JCL FATAL message by " + log.getClass().getName(), new RuntimeException("JCL fatal"));
+    }
+
+    public void testSetLevel() {
+        Log log = LogFactory.getLog(JCLLoggingService.class.getName());
     }
 }

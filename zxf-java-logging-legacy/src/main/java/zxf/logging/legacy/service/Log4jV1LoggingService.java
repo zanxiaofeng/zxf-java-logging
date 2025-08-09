@@ -6,7 +6,6 @@ import org.apache.log4j.MDC;
 import zxf.logging.legacy.utils.FileUtils;
 
 import java.io.IOException;
-import java.util.UUID;
 
 public class Log4jV1LoggingService {
     public void checkConfiguration() throws IOException {
@@ -37,5 +36,11 @@ public class Log4jV1LoggingService {
         logger.fatal("Log4j V1 FATAL message by " + logger.getClass().getName(), new RuntimeException("LOG4J1 fatal"));
         MDC.remove("TraceId");
         //MDC.clear();
+    }
+
+    public void testSetLevel() {
+        Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
+        logger.setLevel(org.apache.log4j.Level.DEBUG);
+        System.out.println("Log4j V1 Logger Level: " + logger.getLevel());
     }
 }

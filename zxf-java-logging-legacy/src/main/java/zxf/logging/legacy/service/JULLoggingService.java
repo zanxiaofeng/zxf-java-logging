@@ -30,4 +30,10 @@ public class JULLoggingService {
         logger.log(Level.WARNING, "JUL WARING message by " + logger.getClass().getName());
         logger.log(Level.SEVERE, "JUL SEVERE message by " + logger.getClass().getName(), new RuntimeException("JUL severe"));
     }
+
+    public void testSetLevel() {
+        Logger logger = Logger.getLogger(JULLoggingService.class.getName());
+        logger.setLevel(Level.FINEST);
+        System.out.println("JUL Logger Level: " + logger.getLevel());
+    }
 }

@@ -32,4 +32,9 @@ public class Slf4jApiLoggingService {
         MDC.remove("TraceId");
         //MDC.clear();
     }
+
+    public void testSetLevel() {
+        Logger logger = LoggerFactory.getLogger(Slf4jApiLoggingService.class);
+
+    }
 }

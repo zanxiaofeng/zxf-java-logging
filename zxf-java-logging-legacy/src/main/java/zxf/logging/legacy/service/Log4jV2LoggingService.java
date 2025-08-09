@@ -51,4 +51,8 @@ public class Log4jV2LoggingService {
         ThreadContext.remove("TraceId");
         //ThreadContext.clearAll();
     }
+
+    public void testSetLevel() {
+        Logger logger = LogManager.getLogger(Log4jV2LoggingService.class);
+    }
 }
