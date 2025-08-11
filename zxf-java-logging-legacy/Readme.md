@@ -63,6 +63,11 @@
 - org.apache.commons.logging.Log
 - org.apache.commons.logging.LogFactory.getLog(<class>)
 - org.apache.commons.logging.impl.LogFactoryImpl.discoverLogImplementation(String logCategory)
+- org.apache.commons.logging.impl.Log4jApiLogFactory
+- org.apache.commons.logging.impl.Slf4jLogFactory
+- implements or adapters
+- org.apache.commons.logging.impl.Jdk14Logger
+- org.apache.commons.logging.impl.SimpleLog
 
 ## Log4j V1 Key Classes
 - org.apache.log4j.Level

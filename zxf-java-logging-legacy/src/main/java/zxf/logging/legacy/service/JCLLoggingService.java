@@ -16,7 +16,6 @@ public class JCLLoggingService {
         System.out.println("1.2 Check org.apache.commons.logging.LogFactory setting from classpath:META-INF/services/org.apache.commons.logging.LogFactory, " + FileUtils.findClassPathFiles("META-INF/services/org.apache.commons.logging.LogFactory"));
         System.out.println("1.3 Check org.apache.commons.logging.LogFactory setting from classpath:commons-logging.properties, " + FileUtils.findClassPathFiles("commons-logging.properties"));
 
-
         System.out.println("2.0 Check org.apache.commons.logging.Log setting.............");
         String configLogFromSysProp = System.getProperty("org.apache.commons.logging.Log");
         System.out.println("2.1 Check org.apache.commons.logging.Log setting from system property, " + configLogFromSysProp);

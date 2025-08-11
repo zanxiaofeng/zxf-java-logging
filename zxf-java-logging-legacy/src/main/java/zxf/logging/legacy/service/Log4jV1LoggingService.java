@@ -1,5 +1,6 @@
 package zxf.logging.legacy.service;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.MDC;
@@ -40,7 +41,7 @@ public class Log4jV1LoggingService {
 
     public void testSetLevel() {
         Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
-        logger.setLevel(org.apache.log4j.Level.DEBUG);
+        logger.setLevel(Level.DEBUG);
         System.out.println("Log4j V1 Logger Level: " + logger.getLevel());
     }
 }

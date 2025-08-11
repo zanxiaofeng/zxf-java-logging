@@ -4,6 +4,8 @@ import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j2;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.logging.LogLevel;
+import org.springframework.boot.logging.LoggingSystem;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,5 +45,13 @@ public class LoggingController {
         slf4jService.setLevel();
         log4j2Service.setLevel();
         commonsLogService.setLevel();
+    }
+
+    @GetMapping("/change-level")
+    public void changeLevel() {
+        LoggingSystem loggingSystem = LoggingSystem.get(getClass().getClassLoader());
+        loggingSystem.setLogLevel(LoggingController.class.getName(), LogLevel.ERROR);
+        loggingSystem.setLogLevel(LoggingSystem.ROOT_LOGGER_NAME, LogLevel.ERROR);
+        log.info("change level to error");
     }
 }
