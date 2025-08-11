@@ -68,6 +68,7 @@
 - implements or adapters
 - org.apache.commons.logging.impl.Jdk14Logger
 - org.apache.commons.logging.impl.SimpleLog
+- org.apache.commons.logging.impl.NoOpLog
 
 ## Log4j V1 Key Classes
 - org.apache.log4j.Level

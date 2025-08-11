@@ -20,5 +20,6 @@ public class LogbackLoggingService {
     public void testSetLevel() {
         LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
         loggerContext.getLogger(LogbackLoggingService.class).setLevel(Level.INFO);
+        loggerContext.getLogger("ROOT").setLevel(Level.INFO);
     }
 }
