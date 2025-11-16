@@ -41,7 +41,6 @@ public class Log4jV2LoggingService {
         System.out.println(String.format("Testing Log4j V2 logging, debug=%s.............", debug));
         ThreadContext.put("TraceId", "log4j2-" + UUID.randomUUID().toString());
         Logger logger = LogManager.getLogger(Log4jV2LoggingService.class);
-        System.out.println("Log4j V2 Log level " + logger.getLevel());
         logger.trace("Log4j V2 TRACE message by " + logger.getClass().getName());
         if (logger.isDebugEnabled()) {
             logger.debug("Log4j V2 DEBUG message by {}", logger.getClass().getName(), new RuntimeException("Log4j2 debug"));
@@ -56,7 +55,19 @@ public class Log4jV2LoggingService {
     }
 
     public void testSetLevel() {
+        System.out.println("Testing Log4j V2 set level.............");
+        Logger rootLogger = LogManager.getRootLogger();
+        System.out.println("Log4j V2 Logger Level(root): " + rootLogger.getLevel());
+        Logger packageLogger = LogManager.getLogger("zxf.logging.legacy");
+        System.out.println("Log4j V2 Logger Level(zxf.logging.legacy): " + packageLogger.getLevel());
+        Logger serviceLogger = LogManager.getLogger(Log4jV2LoggingService.class);
+        System.out.println("Log4j V2 Logger Level(zxf.logging.legacy.service.Log4jV2LoggingService): " + serviceLogger.getLevel());
+
+        System.out.println();
         Configurator.setLevel(Log4jV2LoggingService.class, Level.DEBUG);
+        System.out.println("Log4j V2 Logger Level after set(zxf.logging.legacy.service.Log4jV2LoggingService): " + serviceLogger.getLevel());
         Configurator.setRootLevel(Level.DEBUG);
+        System.out.println("Log4j V2 Logger Level after set(root): " + rootLogger.getLevel());
+        System.out.println("Log4j V2 Logger Level after set(zxf.logging.legacy): " + packageLogger.getLevel());
     }
 }

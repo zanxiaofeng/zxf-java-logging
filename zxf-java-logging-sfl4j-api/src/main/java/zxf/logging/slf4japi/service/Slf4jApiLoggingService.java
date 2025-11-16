@@ -34,7 +34,6 @@ public class Slf4jApiLoggingService {
     }
 
     public void testSetLevel() {
-        Logger logger = LoggerFactory.getLogger(Slf4jApiLoggingService.class);
 
     }
 }

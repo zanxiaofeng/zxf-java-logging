@@ -27,7 +27,6 @@ public class Log4jV1LoggingService {
         System.out.println(String.format("Testing Log4j V1 logging, debug=%s.............", debug));
         MDC.put("TraceId", "log4j1-" + Long.toString(System.currentTimeMillis(), 36));
         Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
-        System.out.println("Log4j V1 Log level " + logger.getLevel());
         logger.trace("Log4j V1 TRACE message by " + logger.getClass().getName());
         if (logger.isDebugEnabled()) {
             logger.debug("Log4j V1 DEBUG message by " + logger.getClass().getName(), new RuntimeException("LOG4j1 debug"));
@@ -41,8 +40,19 @@ public class Log4jV1LoggingService {
     }
 
     public void testSetLevel() {
-        Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
-        logger.setLevel(Level.DEBUG);
-        System.out.println("Log4j V1 Logger Level: " + logger.getLevel());
+        System.out.println("Testing Log4j V1 set level.............");
+        Logger rootLogger = LogManager.getRootLogger();
+        System.out.println("Log4j V1 Logger Level(root): " + rootLogger.getLevel());
+        Logger packageLogger = LogManager.getLogger("zxf.logging.legacy");
+        System.out.println("Log4j V1 Logger Level(zxf.logging.legacy): " + packageLogger.getLevel());
+        Logger serviceLogger = LogManager.getLogger(Log4jV1LoggingService.class);
+        System.out.println("Log4j V1 Logger Level(zxf.logging.legacy.service.Log4jV1LoggingService): " + serviceLogger.getLevel());
+
+        System.out.println();
+        serviceLogger.setLevel(Level.DEBUG);
+        System.out.println("Log4j V1 Logger Level after set(zxf.logging.legacy.service.Log4jV1LoggingService): " + serviceLogger.getLevel());
+        rootLogger.setLevel(Level.DEBUG);
+        System.out.println("Log4j V1 Logger Level after set(root): " + rootLogger.getLevel());
+        System.out.println("Log4j V1 Logger Level after set(zxf.logging.legacy): " + packageLogger.getLevel());
     }
 }

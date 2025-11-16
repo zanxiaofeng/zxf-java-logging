@@ -27,6 +27,7 @@ public class Tests {
 
     private static void testLogback() throws IOException {
         new LogbackLoggingService().checkConfiguration();
+        new LogbackLoggingService().testSetLevel();
     }
 
     private static void testJUL() {
@@ -39,16 +40,19 @@ public class Tests {
 
         new JULLoggingService().checkConfiguration();
         new JULLoggingService().testLogging(false);
+        new JULLoggingService().testSetLevel();
     }
 
     private static void testJCL() throws Exception {
         new JCLLoggingService().checkConfiguration();
         new JCLLoggingService().testLogging(false);
+        new JCLLoggingService().testSetLevel();
     }
 
     private static void testLog4jV1() throws IOException {
         new Log4jV1LoggingService().checkConfiguration();
         new Log4jV1LoggingService().testLogging(false);
+        new Log4jV1LoggingService().testSetLevel();
     }
 
     private static void testLog4jV2() throws IOException {
@@ -59,5 +63,6 @@ public class Tests {
     private static void testSLF4j() throws IOException {
         new Slf4jApiLoggingService().checkConfiguration();
         new Slf4jApiLoggingService().testLogging(false);
+        new Slf4jApiLoggingService().testSetLevel();
     }
 }

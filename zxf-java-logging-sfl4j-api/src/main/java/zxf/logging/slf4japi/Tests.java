@@ -6,5 +6,6 @@ public class Tests {
     public static void main(String[] args) throws Exception {
         new Slf4jApiLoggingService().checkConfiguration();
         new Slf4jApiLoggingService().testLogging(true);
+        new Slf4jApiLoggingService().testSetLevel();
     }
 }

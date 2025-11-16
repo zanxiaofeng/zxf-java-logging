@@ -46,6 +46,6 @@ public class JCLLoggingService {
     }
 
     public void testSetLevel() {
-        Log log = LogFactory.getLog(JCLLoggingService.class.getName());
+
     }
 }

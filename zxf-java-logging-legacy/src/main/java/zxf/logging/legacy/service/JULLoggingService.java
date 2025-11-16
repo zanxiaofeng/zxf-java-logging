@@ -20,7 +20,6 @@ public class JULLoggingService {
     public void testLogging(Boolean debug) {
         System.out.println(String.format("Testing JUL logging, debug=%s.............", debug));
         Logger logger = Logger.getLogger(JULLoggingService.class.getName());
-        System.out.println("JUL Log level " + logger.getLevel());
         if (logger.isLoggable(Level.FINEST)) {
             logger.log(Level.FINEST, "JUL FINEST message by " + logger.getClass().getName(), new RuntimeException("JUL finest"));
         }
@@ -33,8 +32,19 @@ public class JULLoggingService {
     }
 
     public void testSetLevel() {
-        Logger logger = Logger.getLogger(JULLoggingService.class.getName());
-        logger.setLevel(Level.FINEST);
-        System.out.println("JUL Logger Level: " + logger.getLevel());
+        System.out.println("Testing JUL set level.............");
+        Logger globalLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+        System.out.println("JUL Logger Level(global): " + globalLogger.getLevel());
+        Logger packageLogger = Logger.getLogger("zxf.logging.legacy");
+        System.out.println("JUL Logger Level(zxf.logging.legacy): " + packageLogger.getLevel());
+        Logger serviceLogger = Logger.getLogger(JULLoggingService.class.getName());
+        System.out.println("JUL Logger Level(zxf.logging.legacy.service.JULLoggingService): " + serviceLogger.getLevel());
+
+        System.out.println();
+        serviceLogger.setLevel(Level.FINEST);
+        System.out.println("JUL Logger Level after set(zxf.logging.legacy.service.JULLoggingService): " + serviceLogger.getLevel());
+        globalLogger.setLevel(Level.FINEST);
+        System.out.println("JUL Logger Level after set(global): " + globalLogger.getLevel());
+        System.out.println("JUL Logger Level after set(zxf.logging.legacy): " + packageLogger.getLevel());
     }
 }
