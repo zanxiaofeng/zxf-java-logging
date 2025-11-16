@@ -20,6 +20,7 @@ public class JULLoggingService {
     public void testLogging(Boolean debug) {
         System.out.println(String.format("Testing JUL logging, debug=%s.............", debug));
         Logger logger = Logger.getLogger(JULLoggingService.class.getName());
+        System.out.println("JUL Log level " + logger.getLevel());
         if (logger.isLoggable(Level.FINEST)) {
             logger.log(Level.FINEST, "JUL FINEST message by " + logger.getClass().getName(), new RuntimeException("JUL finest"));
         }

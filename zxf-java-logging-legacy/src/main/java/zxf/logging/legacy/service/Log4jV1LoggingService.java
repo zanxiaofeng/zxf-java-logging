@@ -27,6 +27,7 @@ public class Log4jV1LoggingService {
         System.out.println(String.format("Testing Log4j V1 logging, debug=%s.............", debug));
         MDC.put("TraceId", "log4j1-" + Long.toString(System.currentTimeMillis(), 36));
         Logger logger = LogManager.getLogger(Log4jV1LoggingService.class);
+        System.out.println("Log4j V1 Log level " + logger.getLevel());
         logger.trace("Log4j V1 TRACE message by " + logger.getClass().getName());
         if (logger.isDebugEnabled()) {
             logger.debug("Log4j V1 DEBUG message by " + logger.getClass().getName(), new RuntimeException("LOG4j1 debug"));
