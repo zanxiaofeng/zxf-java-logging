@@ -8,7 +8,7 @@
 
   <groupId>ch.qos.logback</groupId>
   <artifactId>logback-parent</artifactId>
-  <version>1.5.18</version>
+  <version>1.5.32</version>
   <packaging>pom</packaging>
 
   <name>Logback-Parent</name>
@@ -24,13 +24,13 @@
 
   <licenses>
     <license>
-      <name>Eclipse Public License - v 1.0</name>
-      <url>http://www.eclipse.org/legal/epl-v10.html</url>
+      <name>Eclipse Public License - v 2.0</name>
+      <url>https://www.eclipse.org/legal/epl-v20.html</url>
     </license>
 
     <license>
       <name>GNU Lesser General Public License</name>
-      <url>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
+      <url>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
     </license>
   </licenses>
 
@@ -43,6 +43,7 @@
     <module>logback-core</module>
     <module>logback-core-blackbox</module>
     <module>logback-classic</module>
+    <module>logback-classic-misc</module>
     <module>logback-classic-blackbox</module>
     <module>logback-access</module>
     <module>logback-examples</module>
@@ -50,7 +51,7 @@
 
   <properties>
     <!-- yyyy-MM-dd'T'HH:mm:ss'Z' -->
-    <project.build.outputTimestamp>2025-03-18T12:42:00Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-02-16T09:54:00Z</project.build.outputTimestamp>
 
     <!-- minimal JDK version at runtime -->
     <jdk.version>11</jdk.version>
@@ -62,14 +63,14 @@
     <junit-vintage-engine.version>5.9.1</junit-vintage-engine.version>
     <junit-jupiter-params.version>5.9.1</junit-jupiter-params.version>
     <junit-platform.version>1.10.5</junit-platform.version>
-    <assertj-core.version>3.23.1</assertj-core.version>
+    <assertj-core.version>3.27.7</assertj-core.version>
     <hamcrest.version>2.2</hamcrest.version>
-    <jakarta.mail.version>2.1.0</jakarta.mail.version>
-    <jakarta.activation.version>2.1.0</jakarta.activation.version>
-    <jakarta.angus-mail.version>1.0.0</jakarta.angus-mail.version>
+    <jakarta.mail.version>2.1.5</jakarta.mail.version>
+    <jakarta.activation.version>2.1.4</jakarta.activation.version>
+    <jakarta.angus-mail.version>2.0.3</jakarta.angus-mail.version>
 
     <jakarta.servlet.version>5.0.0</jakarta.servlet.version>
-    <greenmail.version>2.0.0-alpha-1</greenmail.version>
+    <greenmail.version>2.1.7</greenmail.version>
 
     <janino.version>3.1.8</janino.version>
     <!-- slf4j.version property is used below, in
@@ -88,7 +89,7 @@
     <byte-buddy.version>1.12.14</byte-buddy.version>
 
     <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
-    <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
     <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
     <maven-javadoc-plugin.version>3.3.0</maven-javadoc-plugin.version>
@@ -105,6 +106,9 @@
     <ant.version>1.10.13</ant.version>
     <cobertura.maven.plugin.version>2.7</cobertura.maven.plugin.version>
     <jetty.version>12.0.13</jetty.version>
+
+    <central-publishing-maven-plugin.version>0.9.0</central-publishing-maven-plugin.version>
+
   </properties>
 
   <developers>
@@ -144,6 +148,13 @@
     </dependency>
 
     <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>${junit-jupiter-api.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-library</artifactId>
       <version>${hamcrest.version}</version>
@@ -165,6 +176,11 @@
       <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic-misc</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
@@ -224,6 +240,12 @@
         <artifactId>angus-mail</artifactId>
         <version>${jakarta.angus-mail.version}</version>
       </dependency>
+
+      <!--        <dependency>-->
+      <!--            <groupId>org.eclipse.angus</groupId>-->
+      <!--            <artifactId>angus-activation</artifactId>-->
+      <!--            <version>${jakarta.angus-activation.version}</version>-->
+      <!--        </dependency>-->
 
       <dependency>
         <groupId>jakarta.servlet</groupId>
@@ -353,7 +375,7 @@
           <artifactId>maven-bundle-plugin</artifactId>
           <version>${maven-bundle-plugin.version}</version>
         </plugin>
-    </plugins>
+      </plugins>
 
     </pluginManagement>
 
@@ -406,7 +428,7 @@
 
           <links>
             <link>
-              http://docs.oracle.com/javase/7/docs/api/
+              https://docs.oracle.com/en/java/javase/11/docs/api/
             </link>
           </links>
 
@@ -437,6 +459,16 @@
         </configuration>
       </plugin>
 
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>${central-publishing-maven-plugin.version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+          <excludeArtifacts>logback-core-blackbox,logback-classic-misc,logback-classic-blackbox,logback-examples</excludeArtifacts>
+        </configuration>
+      </plugin>
 
     </plugins>
   </build>
@@ -452,23 +484,6 @@
 
   <reporting>
     <plugins>
-      <!--
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.5</version>
-        <configuration>
-          <aggregate>true</aggregate>
-          <javadocDir>target/site/apidocs/</javadocDir>
-          <linkJavadoc>true</linkJavadoc>
-        </configuration>
-      </plugin>
-      -->
-
-
-
-
-
     </plugins>
   </reporting>
 

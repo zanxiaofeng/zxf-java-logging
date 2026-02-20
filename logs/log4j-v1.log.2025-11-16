@@ -1,0 +1,314 @@
+[ZXF] 2025-07-19 13:40:36 INFO  [main] JCLLoggingService:45, TraceId= - JCL INFO message by org.apache.commons.logging.impl.Log4JLogger
+[ZXF] 2025-07-19 13:40:36 INFO  [main] JCLLoggingService:45, TraceId= - JCL INFO message by org.apache.commons.logging.impl.Log4JLogger
+[ZXF] 2025-07-19 13:40:36 WARN  [main] JCLLoggingService:46, TraceId= - JCL WARN message by org.apache.commons.logging.impl.Log4JLogger
+[ZXF] 2025-07-19 13:40:36 WARN  [main] JCLLoggingService:46, TraceId= - JCL WARN message by org.apache.commons.logging.impl.Log4JLogger
+[ZXF] 2025-07-19 13:40:36 ERROR [main] JCLLoggingService:47, TraceId= - JCL ERROR message by org.apache.commons.logging.impl.Log4JLogger
+java.lang.RuntimeException: JCL error
+	at zxf.logging.legacy.service.JCLLoggingService.testLogging(JCLLoggingService.java:47)
+	at zxf.logging.legacy.Tests.testJCL(Tests.java:29)
+	at zxf.logging.legacy.Tests.main(Tests.java:15)
+[ZXF] 2025-07-19 13:40:36 ERROR [main] JCLLoggingService:47, TraceId= - JCL ERROR message by org.apache.commons.logging.impl.Log4JLogger
+java.lang.RuntimeException: JCL error
+	at zxf.logging.legacy.service.JCLLoggingService.testLogging(JCLLoggingService.java:47)
+	at zxf.logging.legacy.Tests.testJCL(Tests.java:29)
+	at zxf.logging.legacy.Tests.main(Tests.java:15)
+[ZXF] 2025-07-19 13:40:36 FATAL [main] JCLLoggingService:48, TraceId= - JCL FATAL message by org.apache.commons.logging.impl.Log4JLogger
+java.lang.RuntimeException: JCL fatal
+	at zxf.logging.legacy.service.JCLLoggingService.testLogging(JCLLoggingService.java:48)
+	at zxf.logging.legacy.Tests.testJCL(Tests.java:29)
+	at zxf.logging.legacy.Tests.main(Tests.java:15)
+[ZXF] 2025-07-19 13:40:36 FATAL [main] JCLLoggingService:48, TraceId= - JCL FATAL message by org.apache.commons.logging.impl.Log4JLogger
+java.lang.RuntimeException: JCL fatal
+	at zxf.logging.legacy.service.JCLLoggingService.testLogging(JCLLoggingService.java:48)
+	at zxf.logging.legacy.Tests.testJCL(Tests.java:29)
+	at zxf.logging.legacy.Tests.main(Tests.java:15)
+[ZXF] 2025-07-19 13:40:36 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-md9tke3v - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-07-19 13:40:36 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-md9tke3v - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-07-19 13:40:36 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-md9tke3v - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-07-19 13:40:36 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-md9tke3v - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-07-19 13:40:36 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-md9tke3v - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-07-19 13:40:36 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-md9tke3v - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-07-19 13:40:36 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-md9tke3v - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-07-19 13:40:36 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-md9tke3v - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:10:02 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi150zm3 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:10:02 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi150zm3 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:10:02 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi150zm3 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:10:02 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi150zm3 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:10:02 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi150zm3 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:10:02 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi150zm3 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:10:02 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi150zm3 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:10:02 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi150zm3 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:11:53 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi153czu - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:11:53 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi153czu - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:11:53 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi153czu - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:11:53 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi153czu - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:11:53 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi153czu - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:11:53 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi153czu - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:11:53 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi153czu - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:11:53 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi153czu - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:12:28 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi154498 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:12:28 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi154498 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:12:28 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi154498 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:12:28 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi154498 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:12:28 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi154498 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:12:28 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi154498 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:12:28 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi154498 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:12:28 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi154498 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:15:22 INFO  [main] Log4jV1LoggingService:30, TraceId=log4j1-mi157url - Log4j V1 Log level null
+[ZXF] 2025-11-16 11:15:22 INFO  [main] Log4jV1LoggingService:30, TraceId=log4j1-mi157url - Log4j V1 Log level null
+[ZXF] 2025-11-16 11:15:22 INFO  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi157url - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:15:22 INFO  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi157url - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:15:22 WARN  [main] Log4jV1LoggingService:36, TraceId=log4j1-mi157url - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:15:22 WARN  [main] Log4jV1LoggingService:36, TraceId=log4j1-mi157url - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:15:22 ERROR [main] Log4jV1LoggingService:37, TraceId=log4j1-mi157url - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:15:22 ERROR [main] Log4jV1LoggingService:37, TraceId=log4j1-mi157url - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:15:22 FATAL [main] Log4jV1LoggingService:38, TraceId=log4j1-mi157url - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:38)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:15:22 FATAL [main] Log4jV1LoggingService:38, TraceId=log4j1-mi157url - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:38)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:17:04 INFO  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi15a105 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:17:04 INFO  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi15a105 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:17:04 WARN  [main] Log4jV1LoggingService:36, TraceId=log4j1-mi15a105 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:17:04 WARN  [main] Log4jV1LoggingService:36, TraceId=log4j1-mi15a105 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 11:17:04 ERROR [main] Log4jV1LoggingService:37, TraceId=log4j1-mi15a105 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:17:04 ERROR [main] Log4jV1LoggingService:37, TraceId=log4j1-mi15a105 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:17:04 FATAL [main] Log4jV1LoggingService:38, TraceId=log4j1-mi15a105 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:38)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 11:17:04 FATAL [main] Log4jV1LoggingService:38, TraceId=log4j1-mi15a105 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:38)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:34)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:38:15 INFO  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1elwwt - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:38:15 INFO  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1elwwt - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:38:15 WARN  [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1elwwt - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:38:15 WARN  [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1elwwt - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:38:15 ERROR [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1elwwt - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:38:15 ERROR [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1elwwt - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:38:15 FATAL [main] Log4jV1LoggingService:38, TraceId=log4j1-mi1elwwt - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:38)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:38:15 FATAL [main] Log4jV1LoggingService:38, TraceId=log4j1-mi1elwwt - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:38)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:43:12 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1es9tl - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:43:12 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1es9tl - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:43:12 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1es9tl - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:43:12 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1es9tl - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:43:12 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1es9tl - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:43:12 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1es9tl - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:43:12 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1es9tl - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:43:12 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1es9tl - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:47:32 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1exuih - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:47:32 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1exuih - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:47:32 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1exuih - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:47:32 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1exuih - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:47:32 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1exuih - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:47:32 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1exuih - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:47:32 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1exuih - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:47:32 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1exuih - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:49:28 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1f0cg4 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:49:28 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1f0cg4 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:49:28 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1f0cg4 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:49:28 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1f0cg4 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:49:28 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1f0cg4 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:49:28 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1f0cg4 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:49:28 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1f0cg4 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:49:28 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1f0cg4 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:55:09 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1f7myt - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:55:09 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1f7myt - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:55:09 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1f7myt - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:55:09 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1f7myt - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 15:55:09 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1f7myt - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:55:09 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1f7myt - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:55:09 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1f7myt - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 15:55:09 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1f7myt - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:35)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 16:08:02 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1fo828 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 16:08:02 INFO  [main] Log4jV1LoggingService:34, TraceId=log4j1-mi1fo828 - Log4j V1 INFO message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 16:08:02 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1fo828 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 16:08:02 WARN  [main] Log4jV1LoggingService:35, TraceId=log4j1-mi1fo828 - Log4j V1 WARN message by org.apache.log4j.Logger
+[ZXF] 2025-11-16 16:08:02 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1fo828 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:36)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 16:08:02 ERROR [main] Log4jV1LoggingService:36, TraceId=log4j1-mi1fo828 - Log4j V1 ERROR message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 error
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:36)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:36)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 16:08:02 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1fo828 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:36)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
+[ZXF] 2025-11-16 16:08:02 FATAL [main] Log4jV1LoggingService:37, TraceId=log4j1-mi1fo828 - Log4j V1 FATAL message by org.apache.log4j.Logger
+java.lang.RuntimeException: LOG4J1 fatal
+	at zxf.logging.legacy.service.Log4jV1LoggingService.testLogging(Log4jV1LoggingService.java:37)
+	at zxf.logging.legacy.Tests.testLog4jV1(Tests.java:36)
+	at zxf.logging.legacy.Tests.main(Tests.java:16)
