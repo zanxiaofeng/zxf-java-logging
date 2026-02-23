@@ -14,3 +14,19 @@
 - 采用层级展开结构表达
 - Title， subTitle和Value分开
 - 数值量可以采用%展示占比
+
+# Entry Points
+## JUL
+- java.util.logging.Logger
+## JCL
+- org.apache.commons.logging.Log;
+- org.apache.commons.logging.LogFactory;
+## Log4j V1
+- org.apache.log4j.LogManager;
+- org.apache.log4j.Logger;
+## Log4j V2
+- org.apache.logging.log4j.LogManager;
+- org.apache.logging.log4j.Logger;
+## SLF4j 
+- org.slf4j.Logger;
+- org.slf4j.LoggerFactory;
