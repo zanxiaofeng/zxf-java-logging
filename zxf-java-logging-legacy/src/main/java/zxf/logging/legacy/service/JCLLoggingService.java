@@ -33,7 +33,7 @@ public class JCLLoggingService {
         if (debug) {
             System.setProperty("org.apache.commons.logging.diagnostics.dest", "STDOUT");
         }
-        System.out.println(String.format("Testing JCL logging, debug=%s.............", debug));
+        System.out.println("Testing JCL logging, debug=%s.............".formatted(debug));
         Log log = LogFactory.getLog(JCLLoggingService.class.getName());
         log.trace("JCL TRACE message by " + log.getClass().getName());
         if (log.isDebugEnabled()) {

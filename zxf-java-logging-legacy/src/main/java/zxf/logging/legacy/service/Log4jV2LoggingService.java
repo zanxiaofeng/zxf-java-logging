@@ -38,7 +38,7 @@ public class Log4jV2LoggingService {
         if (debug) {
             System.setProperty("log4j2.debug", "true");
         }
-        System.out.println(String.format("Testing Log4j V2 logging, debug=%s.............", debug));
+        System.out.println("Testing Log4j V2 logging, debug=%s.............".formatted(debug));
         ThreadContext.put("TraceId", "log4j2-" + UUID.randomUUID().toString());
         Logger logger = LogManager.getLogger(Log4jV2LoggingService.class);
         logger.trace("Log4j V2 TRACE message by " + logger.getClass().getName());

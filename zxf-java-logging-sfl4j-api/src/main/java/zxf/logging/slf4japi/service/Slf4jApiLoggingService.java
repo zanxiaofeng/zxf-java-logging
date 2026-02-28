@@ -18,7 +18,7 @@ public class Slf4jApiLoggingService {
     }
 
     public void testLogging(Boolean debug) {
-        System.out.println(String.format("Testing SLF4J API logging, debug=%s.............", debug));
+        System.out.println("Testing SLF4J API logging, debug=%s.............".formatted(debug));
         MDC.put("TraceId", "slf4j-" + UUID.randomUUID().toString());
         Logger logger = LoggerFactory.getLogger(Slf4jApiLoggingService.class);
         logger.trace("SLF4J API TRACE message by {}", logger.getClass().getName());
