@@ -27,7 +27,27 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-
+        <!--将log4j、log4j2、JCL的jar包设置为provided，不打入包中-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -46,24 +66,54 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.4.1</version>
                 <executions>
                     <execution>
-                        <id>enforce-banned-dependencies</id>
+                        <id>enforce-rules</id>
                         <goals>
                             <goal>enforce</goal>
                         </goals>
                         <configuration>
                             <rules>
+                                <!-- 1. 环境要求 -->
+                                <requireMavenVersion>
+                                    <version>[3.9,)</version>
+                                </requireMavenVersion>
+                                <requireJavaVersion>
+                                    <version>[21,)</version>
+                                </requireJavaVersion>
+
+                                <!-- 2. 依赖禁令：排除日志冲突 -->
                                 <bannedDependencies>
                                     <excludes>
-                                        <!-- Ban the log4j、log4j2、JCL artifact -->
+                                        <!-- 原生 commons-logging -->
+                                        <exclude>commons-logging:commons-logging</exclude>
+                                        <!-- Log4j V1 -->
                                         <exclude>log4j:log4j</exclude>
+                                        <!-- Log4j V2 -->
                                         <exclude>org.apache.logging.log4j:log4j-api</exclude>
                                         <exclude>org.apache.logging.log4j:log4j-core</exclude>
-                                        <exclude>commons-logging:commons-logging</exclude>
+                                        <!-- SLF4J 到 Log4j 的桥接（与 Logback 冲突） -->
+                                        <exclude>org.slf4j:slf4j-log4j12</exclude>
+                                        <exclude>org.slf4j:slf4j-simple</exclude>
                                     </excludes>
+                                    <searchTransitive>true</searchTransitive>
+                                    <message>
+                                        [ERROR] 发现被禁止的日志依赖！
+                                        请使用 spring-jcl 替代 commons-logging，
+                                        使用 logback-classic 作为 SLF4J 实现。
+                                    </message>
                                 </bannedDependencies>
+
+                                <!-- 3. 依赖收敛检查（防止版本冲突） -->
+                                <dependencyConvergence/>
+
+                                <!-- 4. 可选：强制特定依赖存在 -->
+                                <requireDependencyScopes>
+                                    <scopes>compile,provided,runtime,test</scopes>
+                                </requireDependencyScopes>
                             </rules>
+                            <!-- 违规时构建失败 -->
                             <fail>true</fail>
                         </configuration>
                     </execution>
