@@ -21,31 +21,28 @@
             <groupId>zxf.example</groupId>
             <artifactId>zxf-java-logging-legacy</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j</artifactId>
+                    <groupId>log4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j-api</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j-core</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <!--将log4j、log4j2、JCL的jar包设置为provided，不打入包中-->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -91,27 +88,26 @@
                                         <!-- Log4j V1 -->
                                         <exclude>log4j:log4j</exclude>
                                         <!-- Log4j V2 -->
-                                        <exclude>org.apache.logging.log4j:log4j-api</exclude>
                                         <exclude>org.apache.logging.log4j:log4j-core</exclude>
                                         <!-- SLF4J 到 Log4j 的桥接（与 Logback 冲突） -->
                                         <exclude>org.slf4j:slf4j-log4j12</exclude>
                                         <exclude>org.slf4j:slf4j-simple</exclude>
+                                        <!-- SLF4J 到 JUL 的桥接（与 Logback 冲突） -->
+                                        <exclude>org.slf4j:slf4j-jdk14</exclude>
+                                        <!-- SLF4J 到 log4j2 的桥接（与 Logback 冲突） -->
+                                        <exclude>org.apache.logging.log4j:log4j-slf4j-impl</exclude>
+                                        <exclude>org.apache.logging.log4j:log4j-slf4j2-impl</exclude>
                                     </excludes>
                                     <searchTransitive>true</searchTransitive>
                                     <message>
-                                        [ERROR] 发现被禁止的日志依赖！
-                                        请使用 spring-jcl 替代 commons-logging，
-                                        使用 logback-classic 作为 SLF4J 实现。
+                                        [ERROR] 发现被禁止的日志依赖！ 请使用 spring-jcl 替代 commons-logging， 使用
+                                        logback-classic 作为 SLF4J 实现。
                                     </message>
                                 </bannedDependencies>
 
                                 <!-- 3. 依赖收敛检查（防止版本冲突） -->
                                 <dependencyConvergence/>
 
-                                <!-- 4. 可选：强制特定依赖存在 -->
-                                <requireDependencyScopes>
-                                    <scopes>compile,provided,runtime,test</scopes>
-                                </requireDependencyScopes>
                             </rules>
                             <!-- 违规时构建失败 -->
                             <fail>true</fail>
