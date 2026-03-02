@@ -83,18 +83,19 @@
                                 <!-- 2. 依赖禁令：排除日志冲突 -->
                                 <bannedDependencies>
                                     <excludes>
-                                        <!-- 原生 commons-logging -->
+                                        <!-- 原生 commons-logging（Spring Boot 使用 spring-jcl 替代） -->
                                         <exclude>commons-logging:commons-logging</exclude>
-                                        <!-- Log4j V1 -->
+                                        <!-- Log4j V1（已 EOL，使用 log4j-over-slf4j 桥接替代） -->
                                         <exclude>log4j:log4j</exclude>
-                                        <!-- Log4j V2 -->
+                                        <!-- Log4j V2 核心实现（使用 log4j-to-slf4j 桥接替代） -->
                                         <exclude>org.apache.logging.log4j:log4j-core</exclude>
-                                        <!-- SLF4J 到 Log4j 的桥接（与 Logback 冲突） -->
+                                        <!-- SLF4J 绑定到 Log4j V1（与 Logback 冲突） -->
                                         <exclude>org.slf4j:slf4j-log4j12</exclude>
+                                        <!-- SLF4J Simple 实现（与 Logback 冲突） -->
                                         <exclude>org.slf4j:slf4j-simple</exclude>
-                                        <!-- SLF4J 到 JUL 的桥接（与 Logback 冲突） -->
+                                        <!-- SLF4J 绑定到 JUL（与 Logback 冲突） -->
                                         <exclude>org.slf4j:slf4j-jdk14</exclude>
-                                        <!-- SLF4J 到 log4j2 的桥接（与 Logback 冲突） -->
+                                        <!-- Log4j V2 绑定 SLF4J 1.x/2.x（与 Logback 冲突） -->
                                         <exclude>org.apache.logging.log4j:log4j-slf4j-impl</exclude>
                                         <exclude>org.apache.logging.log4j:log4j-slf4j2-impl</exclude>
                                     </excludes>
