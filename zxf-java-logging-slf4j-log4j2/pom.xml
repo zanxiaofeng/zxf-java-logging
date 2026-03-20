@@ -24,61 +24,91 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-        <!--使用log4j2作为实际的日志实现-->
+        <!-- Log4j2 作为 SLF4J 的实际日志实现 -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
         </dependency>
-        <!--声明将slf4j转log4j2的桥接包-->
+        <!-- SLF4J 2.x 到 Log4j2 的桥接实现 -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j2-impl</artifactId>
         </dependency>
-        <!--声明log4j、JUL、JCL转slf4j的桥接包-->
+        <!-- legacy 框架到 SLF4J 的桥接包 -->
+        <!-- Log4j v1 到 SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>log4j-over-slf4j</artifactId>
         </dependency>
+        <!-- JUL (java.util.logging) 到 SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jul-to-slf4j</artifactId>
         </dependency>
+        <!-- JCL (Commons Logging) 到 SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
         </dependency>
-        <!--将log4j2转slf4j的桥接包设置为provided，不打入包中-->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-to-slf4j</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <!--将log4j、Logback, JCL的jar包设置为provided，不打入包中-->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <!--将slf4j转log4j、JUL、JCL的桥接包设置为provided，不打入包中-->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.4.1</version>
+                <executions>
+                    <execution>
+                        <id>enforce-rules</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <!-- 1. 环境要求 -->
+                                <requireMavenVersion>
+                                    <version>[3.9,)</version>
+                                </requireMavenVersion>
+                                <requireJavaVersion>
+                                    <version>[21,)</version>
+                                </requireJavaVersion>
+
+                                <!-- 2. 依赖禁令：排除日志冲突 -->
+                                <bannedDependencies>
+                                    <excludes>
+                                        <!-- 原生 commons-logging（Spring Boot 使用 spring-jcl 替代） -->
+                                        <exclude>commons-logging:commons-logging</exclude>
+                                        <!-- Log4j V1（已 EOL，使用 log4j-over-slf4j 桥接替代） -->
+                                        <exclude>log4j:log4j</exclude>
+                                        <!-- SLF4J 绑定到 Log4j V1（与 Log4j2 冲突） -->
+                                        <exclude>org.slf4j:slf4j-log4j12</exclude>
+                                        <!-- SLF4J Simple 实现（与 Log4j2 冲突） -->
+                                        <exclude>org.slf4j:slf4j-simple</exclude>
+                                        <!-- SLF4J 绑定到 JUL（与 Log4j2 冲突） -->
+                                        <exclude>org.slf4j:slf4j-jdk14</exclude>
+                                        <!-- Log4j2 到 SLF4J 的桥接（与 Log4j2 实现冲突，会导致循环） -->
+                                        <exclude>org.apache.logging.log4j:log4j-to-slf4j</exclude>
+                                        <!-- Logback 实现（与 Log4j2 冲突） -->
+                                        <exclude>ch.qos.logback:logback-classic</exclude>
+                                    </excludes>
+                                    <searchTransitive>true</searchTransitive>
+                                    <message>
+                                        [ERROR] 发现被禁止的日志依赖！ 请使用 spring-jcl 替代 commons-logging，
+                                        使用 log4j-slf4j2-impl 作为 SLF4J 实现。
+                                    </message>
+                                </bannedDependencies>
+
+                                <!-- 3. 依赖收敛检查（防止版本冲突） -->
+                                <dependencyConvergence/>
+
+                            </rules>
+                            <!-- 违规时构建失败 -->
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

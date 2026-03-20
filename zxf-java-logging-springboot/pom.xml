@@ -95,8 +95,9 @@
                                         <exclude>org.slf4j:slf4j-simple</exclude>
                                         <!-- SLF4J 绑定到 JUL（与 Logback 冲突） -->
                                         <exclude>org.slf4j:slf4j-jdk14</exclude>
-                                        <!-- Log4j V2 绑定 SLF4J 1.x/2.x（与 Logback 冲突） -->
+                                        <!-- SLF4J 1.x 绑定到 Log4j2（与 Logback 冲突） -->
                                         <exclude>org.apache.logging.log4j:log4j-slf4j-impl</exclude>
+                                        <!-- SLF4J 2.x 绑定到 Log4j2（与 Logback 冲突） -->
                                         <exclude>org.apache.logging.log4j:log4j-slf4j2-impl</exclude>
                                     </excludes>
                                     <searchTransitive>true</searchTransitive>
